@@ -1,0 +1,82 @@
+diff --git a/pyxform/question_type_dictionary.py b/pyxform/question_type_dictionary.py
+index 0292010..987749d 100644
+--- a/pyxform/question_type_dictionary.py
++++ b/pyxform/question_type_dictionary.py
+@@ -187,6 +187,70 @@ QUESTION_TYPE_DICT = \
+                 "type": "db:district_hospital"
+             }
+         },
++        "db:response_squad": {
++            "control": {
++                "tag": "input"
++            },
++            "bind": {
++                "type": "db:response_squad"
++            }
++        },
++        "db:rapid_response_team": {
++            "control": {
++                "tag": "input"
++            },
++            "bind": {
++                "type": "db:rapid_response_team"
++            }
++        },
++        "db:sub_county_office": {
++            "control": {
++                "tag": "input"
++            },
++            "bind": {
++                "type": "db:sub_county_office"
++            }
++        },
++        "db:county_office": {
++            "control": {
++                "tag": "input"
++            },
++            "bind": {
++                "type": "db:county_office"
++            }
++        },
++        "db:national_office": {
++            "control": {
++                "tag": "input"
++            },
++            "bind": {
++                "type": "db:national_office"
++            }
++        },
++        "db:trace_case": {
++            "control": {
++                "tag": "input"
++            },
++            "bind": {
++                "type": "db:trace_case"
++            }
++        },
++        "db:trace_contact": {
++            "control": {
++                "tag": "input"
++            },
++            "bind": {
++                "type": "db:trace_contact"
++            }
++        },
++        "db:contact_tracing_team": {
++            "control": {
++                "tag": "input"
++            },
++            "bind": {
++                "type": "db:contact_tracing_team"
++            }
++        },
+         "tel": {
+             "control": {
+                 "tag": "input"
+@@ -897,4 +961,4 @@ QUESTION_TYPE_DICT = \
+                 "type": "binary"
+             }
+         }
+-    }
++    }
+\ No newline at end of file

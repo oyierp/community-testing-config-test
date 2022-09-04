@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Covid Case</h:title>
+    <model>
+      <instance>
+        <data delimiter="#" id="contact:forwarded_case:edit" prefix="J1!contact:forwarded_case:edit!" version="2020-04-26">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+          </inputs>
+          <forwarded_case>
+            <n_case_details/>
+            <case_id/>
+            <national_id/>
+            <passport_number/>
+            <alien_number/>
+            <f_name/>
+            <s_name/>
+            <o_name/>
+            <subcounty/>
+            <ward/>
+            <surveillance_team/>
+            <id_response_squad/>
+            <id_rapid_response/>
+            <assignee/>
+            <meta tag="hidden">
+              <created_by/>
+              <created_by_person_uuid/>
+              <created_by_place_uuid/>
+            </meta>
+          </forwarded_case>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="0"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/forwarded_case/n_case_details" readonly="true()" type="string"/>
+      <bind nodeset="/data/forwarded_case/case_id" required="true()" type="string"/>
+      <bind nodeset="/data/forwarded_case/national_id" type="string"/>
+      <bind nodeset="/data/forwarded_case/passport_number" type="string"/>
+      <bind nodeset="/data/forwarded_case/alien_number" type="string"/>
+      <bind nodeset="/data/forwarded_case/f_name" required="true()" type="string"/>
+      <bind nodeset="/data/forwarded_case/s_name" type="string"/>
+      <bind nodeset="/data/forwarded_case/o_name" type="string"/>
+      <bind nodeset="/data/forwarded_case/subcounty" type="string"/>
+      <bind nodeset="/data/forwarded_case/ward" type="string"/>
+      <bind nodeset="/data/forwarded_case/surveillance_team" required="true()" type="select1"/>
+      <bind nodeset="/data/forwarded_case/id_response_squad" relevant=" /data/forwarded_case/surveillance_team ='contact_tracing'" required="true()" type="db:response_squad"/>
+      <bind nodeset="/data/forwarded_case/id_rapid_response" relevant=" /data/forwarded_case/surveillance_team ='rapid_response'" required="true()" type="db:rapid_response_team"/>
+      <bind calculate="coalesce( /data/forwarded_case/id_response_squad ,  /data/forwarded_case/id_rapid_response )" nodeset="/data/forwarded_case/assignee" type="string"/>
+      <bind calculate="../../../inputs/user/name" nodeset="/data/forwarded_case/meta/created_by" type="string"/>
+      <bind calculate="../../../inputs/user/contact_id" nodeset="/data/forwarded_case/meta/created_by_person_uuid" type="string"/>
+      <bind calculate="../../../inputs/user/facility_id" nodeset="/data/forwarded_case/meta/created_by_place_uuid" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/data/inputs">
+      <label></label>
+      <group ref="/data/inputs/user">
+        <label></label>
+        <input ref="/data/inputs/user/contact_id">
+          <label></label>
+        </input>
+        <input ref="/data/inputs/user/facility_id">
+          <label></label>
+        </input>
+        <input ref="/data/inputs/user/name">
+          <label></label>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/forwarded_case">
+      <label>Covid Case</label>
+      <input ref="/data/forwarded_case/n_case_details">
+        <label>**Case ID:** <output value=" /data/forwarded_case/case_id "/>
+**Name:** <output value=" /data/forwarded_case/f_name "/> <output value=" /data/forwarded_case/s_name "/> <output value=" /data/forwarded_case/o_name "/>
+**Subcounty:** <output value=" /data/forwarded_case/subcounty "/>
+**Ward:** <output value=" /data/forwarded_case/ward "/></label></input>
+      <select1 ref="/data/forwarded_case/surveillance_team">
+        <label>Surveillance team</label>
+        <item>
+          <label>Contact tracing</label>
+          <value>contact_tracing</value>
+        </item>
+        <item>
+          <label>Rapid response</label>
+          <value>rapid_response</value>
+        </item>
+      </select1>
+      <input appearance="db-object bind-id-only" ref="/data/forwarded_case/id_response_squad">
+        <label>Select contact tracer</label>
+      </input>
+      <input appearance="db-object bind-id-only" ref="/data/forwarded_case/id_rapid_response">
+        <label>Select rapid response officer</label>
+      </input>
+      <group appearance="hidden" ref="/data/forwarded_case/meta">
+        <label></label>
+      </group>
+    </group>
+  </h:body>
+</h:html>

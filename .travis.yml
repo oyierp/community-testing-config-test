@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - 8
+  - 10
+  - 12
+script:
+  - sudo python -m pip install git+https://github.com/medic/pyxform.git@medic-conf-1.17#egg=pyxform-medic
+  - sudo ./patch-pyxform.sh
+  - npm test

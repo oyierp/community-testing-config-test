@@ -1,0 +1,104 @@
+{
+  "form:contact:rapid_response_team:edit": {
+    "tracing-covid19.health.go.ke/medic": "b+TYxszm3QNf0Y5CUJSP/Q=="
+  },
+  "form:case_investigation": {
+    "covid-demo-ke.dev.medicmobile.org/medic": "zESbVML+u8N+zc7QscMeRw==",
+    "tracing-covid19.health.go.ke/medic": "Vp/6tdZpfmEgvCv7YjfoVA=="
+  },
+  "form:contact_follow_up": {
+    "tracing-covid19.health.go.ke/medic": "eLup0qP5KAn7HKdM5b1dSA==",
+    "covid-demo-ke.dev.medicmobile.org/medic": "eLup0qP5KAn7HKdM5b1dSA=="
+  },
+  "form:traveller_surveillance": {
+    "tracing-covid19.health.go.ke/medic": "RuGrxYAKA9ip4ZjfvEavtg==",
+    "covid-demo-ke.dev.medicmobile.org/medic": "5Lbf/+Gc9ZKhAIQuAwLDLg=="
+  },
+  "form:contact:forwarded_case:edit": {
+    "covid-demo-ke.dev.medicmobile.org/medic": "9VcCFrXcGGZ4z32B+uoszw==",
+    "tracing-covid19.health.go.ke/medic": "9VcCFrXcGGZ4z32B+uoszw=="
+  },
+  "form:contact:contact_tracing_team:create": {
+    "tracing-covid19.health.go.ke/medic": "ToOH53KoshBV2TOSf7tp7Q=="
+  },
+  "form:contact:contact_tracing_team:edit": {
+    "tracing-covid19.health.go.ke/medic": "rY2USxvKmnqTp56GKs74kg=="
+  },
+  "form:contact:contact_tracing_team_member:create": {
+    "tracing-covid19.health.go.ke/medic": "DMBjnrSE0rVCHfJ4awSlqg=="
+  },
+  "form:contact:contact_tracing_team_member:edit": {
+    "tracing-covid19.health.go.ke/medic": "RV6Rdlt44EBHpxwN7t26AA=="
+  },
+  "form:contact:county_office:create": {
+    "tracing-covid19.health.go.ke/medic": "1pvxEzrDFKr6NsggbqNYtQ=="
+  },
+  "form:contact:county_office:edit": {
+    "tracing-covid19.health.go.ke/medic": "+a38iiIGVB9BOv3ScZCmbw=="
+  },
+  "form:contact:county_officer:create": {
+    "tracing-covid19.health.go.ke/medic": "xQxjF2+fshLcgYkF71I+Dw=="
+  },
+  "form:contact:county_officer:edit": {
+    "tracing-covid19.health.go.ke/medic": "AiJV4uW2G55Pv5qql0Fuvg=="
+  },
+  "form:contact:national_office:create": {
+    "tracing-covid19.health.go.ke/medic": "Bzj3Go7365LnAOlSmD0dWA=="
+  },
+  "form:contact:national_office:edit": {
+    "tracing-covid19.health.go.ke/medic": "5PiFqUQBtzlvq+vonDV3Vg=="
+  },
+  "form:contact:national_officer:create": {
+    "tracing-covid19.health.go.ke/medic": "qGkFEwrpRU4dZbiXc7xw6Q=="
+  },
+  "form:contact:national_officer:edit": {
+    "tracing-covid19.health.go.ke/medic": "rWgJ+YdzcWubfcowiekVHw=="
+  },
+  "form:contact:rapid_response_team:create": {
+    "tracing-covid19.health.go.ke/medic": "f4aCasN6UJyEeJRBE2z1qA=="
+  },
+  "form:contact:rapid_response_team_member:create": {
+    "tracing-covid19.health.go.ke/medic": "Yhy59LwG7usRlUMdyZwN5g=="
+  },
+  "form:contact:rapid_response_team_member:edit": {
+    "tracing-covid19.health.go.ke/medic": "hkaOTJnR0JSrdp0yOxOQkA=="
+  },
+  "form:contact:response_squad:create": {
+    "tracing-covid19.health.go.ke/medic": "Z7IbSUnf23Kkb5VRpC+5Tw=="
+  },
+  "form:contact:response_squad:edit": {
+    "tracing-covid19.health.go.ke/medic": "G4MVFumfIVJg942VjuYHCQ=="
+  },
+  "form:contact:sub_county_office:create": {
+    "tracing-covid19.health.go.ke/medic": "h1CJ0nV0Fo68NMVVpHYmdQ=="
+  },
+  "form:contact:sub_county_office:edit": {
+    "tracing-covid19.health.go.ke/medic": "CuCj3KfoCmBtfxo2r0vbzQ=="
+  },
+  "form:contact:sub_county_officer:create": {
+    "tracing-covid19.health.go.ke/medic": "hZ90wrIfWzMjrEAFjmHwXA=="
+  },
+  "form:contact:sub_county_officer:edit": {
+    "tracing-covid19.health.go.ke/medic": "BDD6STrKTqkc3my0O2kA3g=="
+  },
+  "form:contact:suspected_case:create": {
+    "tracing-covid19.health.go.ke/medic": "BEgScZPnioK3DkBBSZ26QA==",
+    "covid-demo-ke.dev.medicmobile.org/medic": "1m5dx2k4iMMwjnUKpie6iA=="
+  },
+  "form:contact:suspected_case:edit": {
+    "tracing-covid19.health.go.ke/medic": "W5Esr9nUFAlfc5aY48HbnQ==",
+    "covid-demo-ke.dev.medicmobile.org/medic": "Kn5YHUiN62OxBCPiPVDvfw=="
+  },
+  "form:contact:trace_case:edit": {
+    "tracing-covid19.health.go.ke/medic": "8gs5ZOY8aSDKf0TCDSwSaA==",
+    "covid-demo-ke.dev.medicmobile.org/medic": "oXVTO6irGTeZ/G7lYpyw1w=="
+  },
+  "form:contact:trace_contact:create": {
+    "tracing-covid19.health.go.ke/medic": "yS8dFHARXjiP9HpQoDZaNg==",
+    "covid-demo-ke.dev.medicmobile.org/medic": "5G06stn+f3Cis16DEOS1GQ=="
+  },
+  "form:contact:trace_contact:edit": {
+    "tracing-covid19.health.go.ke/medic": "bP2oJ/PGgcY0hvKmd3JOyA==",
+    "covid-demo-ke.dev.medicmobile.org/medic": "apL3iGxQZ9u7I1dReAiQ+w=="
+  }
+}

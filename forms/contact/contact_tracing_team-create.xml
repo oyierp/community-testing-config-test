@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>New Contact Tracing Team</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/data/contact/phone:jr:constraintMsg">
+            <value>Please enter a valid local number, or use the standard international format, which includes a plus sign (+) and country code. For example: +254712345678</value>
+          </text>
+          <text id="/data/contact/phone_alternate:jr:constraintMsg">
+            <value>Please enter a valid local number, or use the standard international format, which includes a plus sign (+) and country code. For example: +254712345678</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data delimiter="#" id="contact:contact_tracing_team:create" prefix="J1!contact:contact_tracing_team:create!" version="2020-04-22 01:39:56">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+          </inputs>
+          <init>
+            <create_new_person/>
+          </init>
+          <contact>
+            <parent>PARENT</parent>
+            <type>contact</type>
+            <contact_type>response_squad_member</contact_type>
+            <name/>
+            <phone/>
+            <phone_alternate/>
+            <external_id/>
+            <notes/>
+            <meta tag="hidden">
+              <created_by/>
+              <created_by_person_uuid/>
+              <created_by_place_uuid/>
+            </meta>
+          </contact>
+          <response_squad>
+            <parent>PARENT</parent>
+            <type>contact</type>
+            <contact_type>response_squad</contact_type>
+            <name/>
+            <external_id/>
+            <notes/>
+            <contact/>
+            <geolocation/>
+            <meta tag="hidden">
+              <created_by/>
+              <created_by_person_uuid/>
+              <created_by_place_uuid/>
+            </meta>
+          </response_squad>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="false()"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/init/create_new_person" required="true()" type="select1"/>
+      <bind nodeset="/data/contact" relevant="selected( /data/init/create_new_person ,'new_person')"/>
+      <bind nodeset="/data/contact/parent" type="string"/>
+      <bind nodeset="/data/contact/type" type="string"/>
+      <bind nodeset="/data/contact/contact_type" type="string"/>
+      <bind nodeset="/data/contact/name" required="true()" type="string"/>
+      <bind constraint="true()" jr:constraintMsg="jr:itext('/data/contact/phone:jr:constraintMsg')" nodeset="/data/contact/phone" type="tel"/>
+      <bind constraint="true()" jr:constraintMsg="jr:itext('/data/contact/phone_alternate:jr:constraintMsg')" nodeset="/data/contact/phone_alternate" type="tel"/>
+      <bind nodeset="/data/contact/external_id" type="string"/>
+      <bind nodeset="/data/contact/notes" type="string"/>
+      <bind calculate="../../../inputs/user/name" nodeset="/data/contact/meta/created_by" type="string"/>
+      <bind calculate="../../../inputs/user/contact_id" nodeset="/data/contact/meta/created_by_person_uuid" type="string"/>
+      <bind calculate="../../../inputs/user/facility_id" nodeset="/data/contact/meta/created_by_place_uuid" type="string"/>
+      <bind nodeset="/data/response_squad/parent" type="string"/>
+      <bind nodeset="/data/response_squad/type" type="string"/>
+      <bind nodeset="/data/response_squad/contact_type" type="string"/>
+      <bind nodeset="/data/response_squad/name" required="true()" type="string"/>
+      <bind nodeset="/data/response_squad/external_id" type="string"/>
+      <bind nodeset="/data/response_squad/notes" type="string"/>
+      <bind calculate="if(selected( /data/init/create_new_person ,'none'), &quot;&quot;, &quot;NEW&quot;)" nodeset="/data/response_squad/contact" type="string"/>
+      <bind calculate="concat(../../inputs/meta/location/lat, concat(' ', ../../inputs/meta/location/long))" nodeset="/data/response_squad/geolocation" type="string"/>
+      <bind calculate="../../../inputs/user/name" nodeset="/data/response_squad/meta/created_by" type="string"/>
+      <bind calculate="../../../inputs/user/contact_id" nodeset="/data/response_squad/meta/created_by_person_uuid" type="string"/>
+      <bind calculate="../../../inputs/user/facility_id" nodeset="/data/response_squad/meta/created_by_place_uuid" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/data/inputs">
+      <label></label>
+      <group ref="/data/inputs/user">
+        <label></label>
+        <input ref="/data/inputs/user/contact_id">
+          <label></label>
+        </input>
+        <input ref="/data/inputs/user/facility_id">
+          <label></label>
+        </input>
+        <input ref="/data/inputs/user/name">
+          <label></label>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/init">
+      <label></label>
+      <select1 ref="/data/init/create_new_person">
+        <label>Set the Primary Contact</label>
+        <item>
+          <label>Create a new person</label>
+          <value>new_person</value>
+        </item>
+        <item>
+          <label>Skip this step</label>
+          <value>none</value>
+        </item>
+      </select1>
+      <group appearance="field-list" ref="/data/contact">
+        <label>Ward Level Tracer</label>
+        <input ref="/data/contact/name">
+          <label>Contact Names</label>
+        </input>
+        <input ref="/data/contact/phone">
+          <label>Phone Number</label>
+        </input>
+        <input ref="/data/contact/phone_alternate">
+          <label>Alternate Phone Number</label>
+        </input>
+        <input ref="/data/contact/external_id">
+          <label>External ID</label>
+        </input>
+        <input appearance="multiline" ref="/data/contact/notes">
+          <label>Notes</label>
+        </input>
+        <group appearance="hidden" ref="/data/contact/meta">
+          <label></label>
+        </group>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/response_squad">
+      <label>New Contact Tracing Team</label>
+      <input ref="/data/response_squad/name">
+        <label>Name</label>
+      </input>
+      <input ref="/data/response_squad/external_id">
+        <label>External ID</label>
+      </input>
+      <input appearance="multiline" ref="/data/response_squad/notes">
+        <label>Notes</label>
+      </input>
+      <group appearance="hidden" ref="/data/response_squad/meta">
+        <label></label>
+      </group>
+    </group>
+  </h:body>
+</h:html>

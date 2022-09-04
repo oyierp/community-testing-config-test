@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+backups
+.hashes
+._revs
+node_modules
+~$*.xlsx
+cache

@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>New Officer</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/data/national_officer/phone:jr:constraintMsg">
+            <value>Please enter a valid local number, or use the standard international format, which includes a plus sign (+) and country code. For example: +254712345678</value>
+          </text>
+          <text id="/data/national_officer/phone_alternate:jr:constraintMsg">
+            <value>Please enter a valid local number, or use the standard international format, which includes a plus sign (+) and country code. For example: +254712345678</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data delimiter="#" id="contact:national_officer:create" prefix="J1!contact:national_officer:create!" version="2020-05-04 17:07:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+          </inputs>
+          <national_officer>
+            <parent>PARENT</parent>
+            <type>contact</type>
+            <contact_type>national_officer</contact_type>
+            <name/>
+            <phone/>
+            <phone_alternate/>
+            <external_id/>
+            <notes/>
+            <meta tag="hidden">
+              <created_by/>
+              <created_by_person_uuid/>
+              <created_by_place_uuid/>
+            </meta>
+          </national_officer>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="false()"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/national_officer/parent" type="string"/>
+      <bind nodeset="/data/national_officer/type" type="string"/>
+      <bind nodeset="/data/national_officer/contact_type" type="string"/>
+      <bind nodeset="/data/national_officer/name" required="true()" type="string"/>
+      <bind constraint="true()" jr:constraintMsg="jr:itext('/data/national_officer/phone:jr:constraintMsg')" nodeset="/data/national_officer/phone" type="tel"/>
+      <bind constraint="true()" jr:constraintMsg="jr:itext('/data/national_officer/phone_alternate:jr:constraintMsg')" nodeset="/data/national_officer/phone_alternate" type="tel"/>
+      <bind nodeset="/data/national_officer/external_id" type="string"/>
+      <bind nodeset="/data/national_officer/notes" type="string"/>
+      <bind calculate="../../../inputs/user/name" nodeset="/data/national_officer/meta/created_by" type="string"/>
+      <bind calculate="../../../inputs/user/contact_id" nodeset="/data/national_officer/meta/created_by_person_uuid" type="string"/>
+      <bind calculate="../../../inputs/user/facility_id" nodeset="/data/national_officer/meta/created_by_place_uuid" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/data/inputs">
+      <label></label>
+      <group ref="/data/inputs/user">
+        <label></label>
+        <input ref="/data/inputs/user/contact_id">
+          <label></label>
+        </input>
+        <input ref="/data/inputs/user/facility_id">
+          <label></label>
+        </input>
+        <input ref="/data/inputs/user/name">
+          <label></label>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/national_officer">
+      <label>New National Trace Office Focal Person</label>
+      <input ref="/data/national_officer/name">
+        <label>Contact Names</label>
+      </input>
+      <input ref="/data/national_officer/phone">
+        <label>Phone Number</label>
+      </input>
+      <input ref="/data/national_officer/phone_alternate">
+        <label>Alternate Phone Number</label>
+      </input>
+      <input ref="/data/national_officer/external_id">
+        <label>External ID</label>
+      </input>
+      <input appearance="multiline" ref="/data/national_officer/notes">
+        <label>Notes</label>
+      </input>
+      <group appearance="hidden" ref="/data/national_officer/meta">
+        <label></label>
+      </group>
+    </group>
+  </h:body>
+</h:html>

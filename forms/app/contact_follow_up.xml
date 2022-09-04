@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Contact follow-up</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/contact_follow_up/group_follow_up/cough/no:label">
+            <value>No</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/cough/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/difficulty_breathing/no:label">
+            <value>No</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/difficulty_breathing/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/fever/no:label">
+            <value>No</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/fever/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/follow_up_type/in_person:label">
+            <value>In Person</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/follow_up_type/phone:label">
+            <value>By Phone</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/running_nose/no:label">
+            <value>No</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/running_nose/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/sore_throat/no:label">
+            <value>No</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/sore_throat/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/status_call/call_not_going_through:label">
+            <value>call not going through</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/status_call/language_barrier:label">
+            <value>Language barrier</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/status_call/not_responding:label">
+            <value>Not responding</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/status_call/responded:label">
+            <value>Responded</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/status_call/wrong_number:label">
+            <value>Wrong number</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/status_visit/available:label">
+            <value>Person Available</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/status_visit/moved_away:label">
+            <value>Moved Away</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/status_visit/not_found_in_usual_place:label">
+            <value>Person not found in their usual place</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/status_visit/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/symptoms/asymptomatic:label">
+            <value>Asymptomatic</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/symptoms/confirmed_case:label">
+            <value>Confirmed case</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/symptoms/deceased:label">
+            <value>Deceased</value>
+          </text>
+          <text id="/contact_follow_up/group_follow_up/symptoms/symptomatic:label">
+            <value>Symptomatic</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <contact_follow_up id="contact_follow_up" prefix="J1!contact_follow_up!" delimiter="#" version="2020-08-07">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source>user</source>
+            <source_id/>
+            <t_follow_up_count/>
+            <contact>
+              <_id/>
+              <type/>
+              <contact_type/>
+              <role/>
+              <case_id/>
+              <case_name/>
+              <type_of_contact/>
+              <relation_to_case/>
+              <national_id/>
+              <passport_number/>
+              <alien_number/>
+              <s_name/>
+              <f_name/>
+              <o_name/>
+              <name/>
+              <sex/>
+              <dob_known/>
+              <date_of_birth/>
+              <marital_status/>
+              <head_of_household/>
+              <date_of_last_contact/>
+              <occupation/>
+              <occupation_other/>
+              <health_care_worker/>
+              <facility/>
+              <education/>
+              <deceased/>
+              <date_of_death/>
+              <nationality/>
+              <phone/>
+              <alternate_phone/>
+              <postal_address/>
+              <email_address/>
+              <county/>
+              <subcounty/>
+              <ward/>
+              <location/>
+              <sub_location/>
+              <village/>
+              <landmark/>
+              <residence/>
+              <nearest_health_center/>
+              <kin_name/>
+              <kin_relationship/>
+              <kin_phone_number/>
+              <kin_postal_address/>
+              <type_of_exposure/>
+              <parent>
+                <_id/>
+                <kemr_uuid/>
+              </parent>
+            </contact>
+          </inputs>
+          <patient_id/>
+          <patient_uuid/>
+          <patient_age_in_years/>
+          <patient_age_in_months/>
+          <patient_age_display/>
+          <needs_follow_up/>
+          <follow_up_count/>
+          <has_symptoms/>
+          <has_symptoms_only/>
+          <last_contact_date/>
+          <group_follow_up>
+            <n_details/>
+            <date_last_contact>2020-08-07</date_last_contact>
+            <follow_up_type/>
+            <call_button/>
+            <no_phone/>
+            <status_call/>
+            <status_call_other/>
+            <status_visit/>
+            <status_visit_other/>
+            <is_available/>
+            <symptoms/>
+            <date_of_death/>
+            <developed_symptoms/>
+            <temperature/>
+            <c_temperature/>
+            <n_fever/>
+            <n_not_fever/>
+            <fever/>
+            <c_fever/>
+            <cough/>
+            <running_nose/>
+            <sore_throat/>
+            <difficulty_breathing/>
+            <other_symptoms/>
+            <needs_referral/>
+            <referral_snippet/>
+            <is_not_available_reason>none</is_not_available_reason>
+            <is_not_available_reason_other/>
+            <r_referral/>
+          </group_follow_up>
+          <r_summary>
+            <r_submit/>
+            <r_summary/>
+            <r_patient_info/>
+            <r_screening/>
+            <c_condition/>
+            <r_no_condition/>
+            <r_followup/>
+            <n_notify/>
+            <n_notify2/>
+            <r_followup_note/>
+            <r_followup_note_14/>
+          </r_summary>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </contact_follow_up>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/contact_follow_up/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/contact_follow_up/inputs/source" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/source_id" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/t_follow_up_count" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/_id" type="db:trace_contact"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/type" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/contact_type" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/role" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/case_id" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/case_name" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/type_of_contact" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/relation_to_case" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/national_id" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/passport_number" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/alien_number" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/s_name" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/f_name" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/o_name" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/name" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/sex" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/dob_known" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/marital_status" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/head_of_household" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/date_of_last_contact" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/occupation" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/occupation_other" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/health_care_worker" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/facility" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/education" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/deceased" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/date_of_death" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/nationality" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/phone" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/alternate_phone" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/postal_address" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/email_address" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/county" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/subcounty" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/ward" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/location" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/sub_location" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/village" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/landmark" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/residence" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/nearest_health_center" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/kin_name" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/kin_relationship" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/kin_phone_number" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/kin_postal_address" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/type_of_exposure" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/parent/_id" type="string"/>
+      <bind nodeset="/contact_follow_up/inputs/contact/parent/kemr_uuid" type="string"/>
+      <bind nodeset="/contact_follow_up/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/contact_follow_up/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/contact_follow_up/patient_age_in_years" type="string" calculate="floor( difference-in-months(  /contact_follow_up/inputs/contact/date_of_birth , today() ) div 12 )"/>
+      <bind nodeset="/contact_follow_up/patient_age_in_months" type="string" calculate="difference-in-months(  /contact_follow_up/inputs/contact/date_of_birth , today() )"/>
+      <bind nodeset="/contact_follow_up/patient_age_display" type="string" calculate="concat(
+ concat( /contact_follow_up/patient_age_in_years , if( /contact_follow_up/patient_age_in_years =1,' year and ',' years and ')),
+ concat( /contact_follow_up/patient_age_in_months  mod 12, if(( /contact_follow_up/patient_age_in_months  mod 12)=1,' month old',' months old'))
+)"/>
+      <bind nodeset="/contact_follow_up/needs_follow_up" type="string" calculate="if( /contact_follow_up/group_follow_up/needs_referral  = 'true', 'no', 'yes')"/>
+      <bind nodeset="/contact_follow_up/follow_up_count" type="string" calculate="if(../inputs/t_follow_up_count != '', ../inputs/t_follow_up_count, 1)"/>
+      <bind nodeset="/contact_follow_up/has_symptoms" type="string" calculate="if( /contact_follow_up/group_follow_up/cough  = 'yes' or  /contact_follow_up/group_follow_up/fever  = 'yes' or  /contact_follow_up/group_follow_up/difficulty_breathing  = 'yes' or  /contact_follow_up/group_follow_up/temperature  &gt;=38, 'true', 'false')"/>
+      <bind nodeset="/contact_follow_up/has_symptoms_only" type="string" calculate="if( /contact_follow_up/group_follow_up/cough  = 'yes' or  /contact_follow_up/group_follow_up/fever  = 'yes' or  /contact_follow_up/group_follow_up/difficulty_breathing  = 'yes', 'true', 'false')"/>
+      <bind nodeset="/contact_follow_up/last_contact_date" type="string" calculate="2020-08-07"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/n_details" readonly="true()" type="string"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/date_last_contact" readonly="true()" type="string"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/follow_up_type" type="select1" jr:constraintMsg="There's no registered phone number" required="true()" constraint="not(selected(.,'phone') and  /contact_follow_up/inputs/contact/phone  = '')"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/call_button" readonly="true()" type="string" relevant=" /contact_follow_up/group_follow_up/follow_up_type ='phone' and  /contact_follow_up/inputs/contact/phone !=''"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/no_phone" readonly="true()" type="string" relevant=" /contact_follow_up/group_follow_up/follow_up_type ='phone' and  /contact_follow_up/inputs/contact/phone =''"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/status_call" type="select1" relevant=" /contact_follow_up/group_follow_up/follow_up_type ='phone' and  /contact_follow_up/inputs/contact/phone !=''" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/status_call_other" type="string" relevant=" /contact_follow_up/group_follow_up/status_call  = 'other'" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/status_visit" type="select1" relevant=" /contact_follow_up/group_follow_up/follow_up_type  = 'in_person'" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/status_visit_other" type="string" relevant=" /contact_follow_up/group_follow_up/status_visit  = 'other'" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/is_available" type="string" calculate="if(( /contact_follow_up/group_follow_up/symptoms !='' and  /contact_follow_up/group_follow_up/symptoms !='deceased') or ( /contact_follow_up/group_follow_up/status_call  != '' and  /contact_follow_up/group_follow_up/status_call  != 'wrong_number' and  /contact_follow_up/group_follow_up/status_call  != 'not_responding' and  /contact_follow_up/group_follow_up/status_call  != 'call_not_going_through') or ( /contact_follow_up/group_follow_up/status_visit  != '' and  /contact_follow_up/group_follow_up/status_visit  !='moved_away' and  /contact_follow_up/group_follow_up/status_visit  !='not_found_in_usual_place'), 'yes','no')"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/symptoms" type="select1" relevant=" /contact_follow_up/group_follow_up/status_visit  = 'available' or  /contact_follow_up/group_follow_up/status_visit  = 'not_found_in_usual_place' or  /contact_follow_up/group_follow_up/status_call  = 'responded'" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/date_of_death" type="date" relevant="selected( /contact_follow_up/group_follow_up/symptoms , 'deceased')" jr:constraintMsg="Date must not be in the future" required="true()" constraint=". &lt; today()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/developed_symptoms" readonly="true()" type="string" relevant=" /contact_follow_up/group_follow_up/symptoms ='symptomatic'" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/temperature" type="decimal" relevant=" /contact_follow_up/group_follow_up/symptoms ='symptomatic'" jr:constraintMsg="Temperature should be between 25 and 43 inclusive" constraint=".&gt;=25 and .&lt;=43"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/c_temperature" type="string" relevant=" /contact_follow_up/group_follow_up/symptoms ='symptomatic'" calculate="if( /contact_follow_up/group_follow_up/temperature != '',  /contact_follow_up/group_follow_up/temperature , '')"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/n_fever" readonly="true()" type="string" relevant=" /contact_follow_up/group_follow_up/temperature &gt;=38 and  /contact_follow_up/group_follow_up/symptoms ='symptomatic'"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/n_not_fever" readonly="true()" type="string" relevant=" /contact_follow_up/group_follow_up/temperature !='' and  /contact_follow_up/group_follow_up/temperature &lt;38 and  /contact_follow_up/group_follow_up/temperature !=0 and  /contact_follow_up/group_follow_up/symptoms ='symptomatic'"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/fever" type="select1" relevant="( /contact_follow_up/group_follow_up/temperature ='' or  /contact_follow_up/group_follow_up/temperature =0) and  /contact_follow_up/group_follow_up/symptoms ='symptomatic'" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/c_fever" type="string" relevant=" /contact_follow_up/group_follow_up/symptoms ='symptomatic'" calculate="if( /contact_follow_up/group_follow_up/temperature &gt;=38 or  /contact_follow_up/group_follow_up/fever  = 'yes', 'yes', 'no')"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/cough" type="select1" relevant=" /contact_follow_up/group_follow_up/symptoms ='symptomatic'" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/running_nose" type="select1" relevant=" /contact_follow_up/group_follow_up/symptoms ='symptomatic'" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/sore_throat" type="select1" relevant=" /contact_follow_up/group_follow_up/symptoms ='symptomatic'" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/difficulty_breathing" type="select1" relevant=" /contact_follow_up/group_follow_up/symptoms ='symptomatic'" required="true()"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/other_symptoms" type="string" relevant=" /contact_follow_up/group_follow_up/symptoms ='symptomatic'"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/needs_referral" type="string" calculate="if( /contact_follow_up/group_follow_up/fever  = 'yes' or  /contact_follow_up/group_follow_up/cough  = 'yes' or  /contact_follow_up/group_follow_up/running_nose  = 'yes' or  /contact_follow_up/group_follow_up/sore_throat  = 'yes' or  /contact_follow_up/group_follow_up/difficulty_breathing  = 'yes', 'true','false')"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/referral_snippet" type="string" calculate="if( /contact_follow_up/group_follow_up/needs_referral  = 'true',' and refer the patient to hospital', '')"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/is_not_available_reason" type="string" calculate="if( /contact_follow_up/group_follow_up/symptoms  = 'deceased', 'deceased', if( /contact_follow_up/group_follow_up/status_call  = 'wrong_number' or  /contact_follow_up/group_follow_up/status_call  = 'not_responding' or  /contact_follow_up/group_follow_up/status_call  = 'call_not_going_through', 'phone_off', if( /contact_follow_up/group_follow_up/status_visit  = 'moved_away', 'moved_away', if( /contact_follow_up/group_follow_up/status_visit  = 'not_found_in_usual_place', 'person_not_found', '' ))))"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/is_not_available_reason_other" type="string"/>
+      <bind nodeset="/contact_follow_up/group_follow_up/r_referral" readonly="true()" type="string" relevant=" /contact_follow_up/has_symptoms ='true'"/>
+      <bind nodeset="/contact_follow_up/r_summary/r_submit" readonly="true()" type="string"/>
+      <bind nodeset="/contact_follow_up/r_summary/r_summary" readonly="true()" type="string"/>
+      <bind nodeset="/contact_follow_up/r_summary/r_patient_info" readonly="true()" type="string"/>
+      <bind nodeset="/contact_follow_up/r_summary/r_screening" readonly="true()" type="string"/>
+      <bind nodeset="/contact_follow_up/r_summary/c_condition" type="string" calculate="if( /contact_follow_up/has_symptoms ='true', if(selected( /contact_follow_up/group_follow_up/symptoms ,'deceased'),' /contact_follow_up/inputs/contact/name  passed away','Has Acute Respiratory infection symptoms'),'No Acute Respiratory infection symptoms')"/>
+      <bind nodeset="/contact_follow_up/r_summary/r_no_condition" readonly="true()" type="string"/>
+      <bind nodeset="/contact_follow_up/r_summary/r_followup" readonly="true()" type="string"/>
+      <bind nodeset="/contact_follow_up/r_summary/n_notify" readonly="true()" type="string" relevant=" /contact_follow_up/has_symptoms ='true' and not(selected( /contact_follow_up/group_follow_up/symptoms ,'deceased'))"/>
+      <bind nodeset="/contact_follow_up/r_summary/n_notify2" readonly="true()" type="string" relevant="selected( /contact_follow_up/group_follow_up/symptoms ,'deceased')"/>
+      <bind nodeset="/contact_follow_up/r_summary/r_followup_note" readonly="true()" type="string" relevant=" /contact_follow_up/group_follow_up/status_call ='responded' and not(selected( /contact_follow_up/group_follow_up/symptoms ,'deceased'))"/>
+      <bind nodeset="/contact_follow_up/r_summary/r_followup_note_14" readonly="true()" type="string" relevant=" /contact_follow_up/inputs/t_follow_up_count ='14' or selected( /contact_follow_up/group_follow_up/symptoms ,'deceased')"/>
+      <bind nodeset="/contact_follow_up/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/contact_follow_up/inputs">
+      <label>Patient</label>
+      <group ref="/contact_follow_up/inputs/contact">
+        <label>Contact</label>
+        <input appearance="db-object" ref="/contact_follow_up/inputs/contact/_id">
+          <label>What is the traveller's name?</label>
+          <hint>Select a person from list</hint>
+        </input>
+        <group ref="/contact_follow_up/inputs/contact/parent"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/contact_follow_up/group_follow_up">
+      <label>Contact details</label>
+      <input ref="/contact_follow_up/group_follow_up/n_details">
+        <label>**Name:** <output value=" /contact_follow_up/inputs/contact/name "/> **Date of birth:** <output value=" /contact_follow_up/inputs/contact/date_of_birth "/> **Phone number:** <output value=" /contact_follow_up/inputs/contact/phone "/></label></input>
+      <input ref="/contact_follow_up/group_follow_up/date_last_contact">
+        <label>**Date of last contact:** <output value=" /contact_follow_up/inputs/contact/date_of_last_contact "/></label>
+      </input>
+      <select1 ref="/contact_follow_up/group_follow_up/follow_up_type">
+        <label>How are you following up?</label>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/follow_up_type/in_person:label')"/>
+          <value>in_person</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/follow_up_type/phone:label')"/>
+          <value>phone</value>
+        </item>
+      </select1>
+      <input ref="/contact_follow_up/group_follow_up/call_button">
+        <label>[&lt;span style='background-color:#F0F4FD; border:1px solid #007AC0; padding: 0.5em; border-radius: 4px; text-decoration:none; display: block; margin-left: auto; margin-right: auto; width: 40%; text-align: center;'&gt;&lt;i class=&quot;fa fa-phone&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&amp;nbsp;Call <output value=" /contact_follow_up/inputs/contact/name "/>&lt;/span&gt;](tel://<output value=" /contact_follow_up/inputs/contact/phone "/>)</label>
+      </input>
+      <input ref="/contact_follow_up/group_follow_up/no_phone">
+        <label><output value=" /contact_follow_up/inputs/contact/name "/> does not have a registered phone number</label>
+      </input>
+      <select1 ref="/contact_follow_up/group_follow_up/status_call">
+        <label>Status of call</label>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/status_call/language_barrier:label')"/>
+          <value>language_barrier</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/status_call/wrong_number:label')"/>
+          <value>wrong_number</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/status_call/not_responding:label')"/>
+          <value>not_responding</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/status_call/responded:label')"/>
+          <value>responded</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/status_call/call_not_going_through:label')"/>
+          <value>call_not_going_through</value>
+        </item>
+      </select1>
+      <input ref="/contact_follow_up/group_follow_up/status_call_other">
+        <label>Please specify</label>
+      </input>
+      <select1 ref="/contact_follow_up/group_follow_up/status_visit">
+        <label>Status of visit</label>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/status_visit/available:label')"/>
+          <value>available</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/status_visit/moved_away:label')"/>
+          <value>moved_away</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/status_visit/not_found_in_usual_place:label')"/>
+          <value>not_found_in_usual_place</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/status_visit/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+      <input ref="/contact_follow_up/group_follow_up/status_visit_other">
+        <label>Please specify</label>
+      </input>
+      <select1 ref="/contact_follow_up/group_follow_up/symptoms">
+        <label>Symptoms</label>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/symptoms/symptomatic:label')"/>
+          <value>symptomatic</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/symptoms/asymptomatic:label')"/>
+          <value>asymptomatic</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/symptoms/confirmed_case:label')"/>
+          <value>confirmed_case</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/symptoms/deceased:label')"/>
+          <value>deceased</value>
+        </item>
+      </select1>
+      <input ref="/contact_follow_up/group_follow_up/date_of_death">
+        <label>Date of death</label>
+      </input>
+      <input appearance="horizontal" ref="/contact_follow_up/group_follow_up/developed_symptoms">
+        <label>Has <output value=" /contact_follow_up/inputs/contact/name "/> developed any of the following signs of acute respiratory infection</label>
+      </input>
+      <input ref="/contact_follow_up/group_follow_up/temperature">
+        <label>Measured temperature</label>
+      </input>
+      <input ref="/contact_follow_up/group_follow_up/n_fever">
+        <label>&lt;span style='color:red;'&gt;Patient has fever&lt;/span&gt;</label>
+      </input>
+      <input ref="/contact_follow_up/group_follow_up/n_not_fever">
+        <label>Patient has no fever</label>
+      </input>
+      <select1 appearance="horizontal" ref="/contact_follow_up/group_follow_up/fever">
+        <label>Fever</label>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/fever/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/fever/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="horizontal" ref="/contact_follow_up/group_follow_up/cough">
+        <label>Cough</label>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/cough/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/cough/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="horizontal" ref="/contact_follow_up/group_follow_up/running_nose">
+        <label>Running nose</label>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/running_nose/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/running_nose/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="horizontal" ref="/contact_follow_up/group_follow_up/sore_throat">
+        <label>Sore throat</label>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/sore_throat/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/sore_throat/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="horizontal" ref="/contact_follow_up/group_follow_up/difficulty_breathing">
+        <label>Shortness of breath</label>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/difficulty_breathing/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/contact_follow_up/group_follow_up/difficulty_breathing/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/contact_follow_up/group_follow_up/other_symptoms">
+        <label>Others (specify)</label>
+      </input>
+      <input appearance="h1 red" ref="/contact_follow_up/group_follow_up/r_referral">
+        <label>&lt;span style='color:red;'&gt;Person has suspected symptoms. &lt;i class="fa fa-warning"&gt;&lt;/i&gt;&lt;/span&gt;</label>
+      </input>
+    </group>
+    <group appearance="field-list summary" ref="/contact_follow_up/r_summary">
+      <label></label>
+      <input ref="/contact_follow_up/r_summary/r_submit">
+        <label>**Click the Submit button at the bottom of the form.**</label>
+      </input>
+      <input appearance="h1 yellow" ref="/contact_follow_up/r_summary/r_summary">
+        <label>Person's Details&lt;I class="fa fa-user"&gt;&lt;/i&gt;</label>
+      </input>
+      <input ref="/contact_follow_up/r_summary/r_patient_info">
+        <label>&lt;h4 style=&quot;text-align:center;&quot;&gt;<output value=" /contact_follow_up/inputs/contact/name "/>&lt;/h4&gt;&lt;h5 style=&quot;text-align:center;&quot;&gt;<output value=" /contact_follow_up/patient_age_display "/> &lt;/h5&gt;</label>
+      </input>
+      <input appearance="h1 blue" ref="/contact_follow_up/r_summary/r_screening">
+        <label>Patient Condition &lt;i class="fa fa-medkit"&gt;&lt;/i&gt;</label>
+      </input>
+      <input ref="/contact_follow_up/r_summary/r_no_condition">
+        <label><output value=" /contact_follow_up/r_summary/c_condition "/></label>
+      </input>
+      <input appearance="h1 green" ref="/contact_follow_up/r_summary/r_followup">
+        <label>Follow Up Tasks &lt;i class="fa fa-flag"&gt;&lt;/i&gt;</label>
+      </input>
+      <input ref="/contact_follow_up/r_summary/n_notify">
+        <label>Notify Rapid Response Team immediately for case investigation to commence</label>
+      </input>
+      <input ref="/contact_follow_up/r_summary/n_notify2">
+        <label><output value=" /contact_follow_up/inputs/contact/name "/> passed away</label>
+      </input>
+      <input ref="/contact_follow_up/r_summary/r_followup_note">
+        <label>Contact Follow up task will appear tomorrow</label>
+      </input>
+      <input ref="/contact_follow_up/r_summary/r_followup_note_14">
+        <label>No more Contact Follow up tasks</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>

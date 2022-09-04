@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Edit Rapid Response Office</h:title>
+    <model>
+      <instance>
+        <data id="contact:rapid_response_team:edit" prefix="J1!contact:rapid_response_team:edit!" delimiter="#" version="2020-05-17 22:18:07">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+          </inputs>
+          <rapid_response_team>
+            <type>contact</type>
+            <contact_type>rapid_response_team</contact_type>
+            <name/>
+            <external_id/>
+            <location/>
+            <notes/>
+            <geolocation/>
+            <meta tag="hidden">
+              <last_edited_by/>
+              <last_edited_by_person_uuid/>
+              <last_edited_by_place_uuid/>
+            </meta>
+          </rapid_response_team>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="false()"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/rapid_response_team/type" type="string"/>
+      <bind nodeset="/data/rapid_response_team/contact_type" type="string"/>
+      <bind nodeset="/data/rapid_response_team/name" type="string" required="true()"/>
+      <bind nodeset="/data/rapid_response_team/external_id" type="string"/>
+      <bind nodeset="/data/rapid_response_team/location" type="string"/>
+      <bind nodeset="/data/rapid_response_team/notes" type="string"/>
+      <bind nodeset="/data/rapid_response_team/geolocation" type="string" calculate="concat(../../inputs/meta/location/lat, concat(' ', ../../inputs/meta/location/long))"/>
+      <bind nodeset="/data/rapid_response_team/meta/last_edited_by" type="string" calculate="../../../inputs/user/name"/>
+      <bind nodeset="/data/rapid_response_team/meta/last_edited_by_person_uuid" type="string" calculate="../../../inputs/user/contact_id"/>
+      <bind nodeset="/data/rapid_response_team/meta/last_edited_by_place_uuid" type="string" calculate="../../../inputs/user/facility_id"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/data/inputs">
+      <label></label>
+      <group ref="/data/inputs/user">
+        <label></label>
+        <input ref="/data/inputs/user/contact_id">
+          <label></label>
+        </input>
+        <input ref="/data/inputs/user/facility_id">
+          <label></label>
+        </input>
+        <input ref="/data/inputs/user/name">
+          <label></label>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/rapid_response_team">
+      <label>Edit Rapid Response Team</label>
+      <input ref="/data/rapid_response_team/name">
+        <label>Name</label>
+      </input>
+      <input ref="/data/rapid_response_team/external_id">
+        <label>External ID</label>
+      </input>
+      <input ref="/data/rapid_response_team/location">
+        <label>Location</label>
+      </input>
+      <input appearance="multiline" ref="/data/rapid_response_team/notes">
+        <label>Notes</label>
+      </input>
+      <group appearance="hidden" ref="/data/rapid_response_team/meta">
+        <label></label>
+      </group>
+    </group>
+  </h:body>
+</h:html>

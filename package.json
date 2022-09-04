@@ -1,0 +1,27 @@
+{
+  "name": "medic-config-covid-ke",
+  "version": "0.1.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm ci && npm run compile-forms && npm run check-app-settings && npm run unittest",
+    "check-app-settings": "./test/check-app-settings-is-committed",
+    "compile-forms": "npx medic-conf --no-check convert-app-forms convert-contact-forms",
+    "unittest": "TZ=Africa/Nairobi mocha test/**/*.spec.js --timeout 15000 --slow 500",
+    "dev-form": "ls -R1a forms/app/*.xlsx | npx medic-conf convert-app-forms -- "
+  },
+  "devDependencies": {
+    "@medic/eslint-config": "^1.1.0",
+    "chai": "^4.1.2",
+    "chai-exclude": "^1.0.8",
+    "eslint": "^6.8.0",
+    "eslint-plugin-json": "^1.3.2",
+    "medic-conf": "^3.2.1",
+    "medic-conf-test-harness": "^0.1.30",
+    "medic-nootils": "^4.0.1",
+    "mocha": "^6.1.4",
+    "moment": "^2.24.0"
+  }
+}
