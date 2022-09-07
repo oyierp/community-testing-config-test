@@ -299,8 +299,8 @@
       "sub_county_admin",
       "chw_supervisor"
     ],
-    "can_view_tasks_tab":
-      "sub_county_admin", [
+    "can_view_tasks_tab":[
+      "sub_county_admin",
       "chw_supervisor"
     ],
     "can_view_unallocated_data_records": [
