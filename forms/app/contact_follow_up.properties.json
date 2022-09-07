@@ -1,9 +1,0 @@
-{
-  "icon": "icon-follow-up",
-    "title": "Contact follow up",
-    "context": {
-        "place": false,
-        "person": true,
-        "expression": "contact.contact_type === 'trace_contact' && !contact.transitioned_to_case"
-    }
-}
