@@ -346,8 +346,8 @@
               ""
            ],
            "icon":"medic-national",
-           "create_form":"form:contact:national-office:create",
-           "edit_form":"form:contact:national-office:edit"
+           "create_form":"form:contact:national_office:create",
+           "edit_form":"form:contact:national_office:edit"
         },
         {
            "id":"county_office",
@@ -537,23 +537,8 @@
            "create_form":"form:contact:chw:create",
            "edit_form":"form:contact:chw:edit",
            "person":true
-        },
-        {
-           "id":"house_hold_member",
-           "name_key":"contact.type.house_hold_member",
-           "group_key":"contact.type.house_hold_member.plural",
-           "create_key":"contact.type.house_hold_member.new",
-           "edit_key":"contact.type.house_hold_member.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "house_hold"
-           ],
-           "icon":"house-hold-member",
-           "create_form":"form:contact:suspected_case:create",
-           "edit_form":"form:contact:suspected_case:edit",
-           "person":true
         }
-     ],
+      ],
      "setup_complete":true,
      "contact_summary":"var ContactSummary = {}; !function(e,t){if('object'==typeof exports&&'object'==typeof module)module.exports=t();else if('function'==typeof define&&define.amd)define([],t);else{var n=t();for(var a in n)('object'==typeof exports?exports:e)[a]=n[a]}}(ContactSummary,(function(){return function(e){var t={};function n(a){if(t[a])return t[a].exports;var o=t[a]={i:a,l:!1,exports:{}};return e[a].call(o.exports,o,o.exports,n),o.l=!0,o.exports}return n.m=e,n.c=t,n.d=function(e,t,a){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:a})},n.r=function(e){'undefined'!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:'Module'}),Object.defineProperty(e,'__esModule',{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&'object'==typeof e&&e&&e.__esModule)return e;var a=Object.create(null);if(n.r(a),Object.defineProperty(a,'default',{enumerable:!0,value:e}),2&t&&'string'!=typeof e)for(var o in e)n.d(a,o,function(t){return e[t]}.bind(null,o));return a},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,'a',t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p='',n(n.s=0)}([function(e,t,n){var a=n(1),o=n(2);e.exports=o(a,contact,reports)},function(e,t){const n=[{appliesToType:'person',label:'contact.age',value:contact.date_of_birth,width:4,filter:'age'},{appliesToType:'person',label:'contact.sex',value:'contact.sex.'+contact.sex,translate:!0,width:4},{appliesToType:'person',label:'contact.phone',value:contact.phone,width:4,filter:'phone'},{appliesToType:'person',label:'contact.parent',value:lineage,filter:'lineage'},{appliesToType:'person',label:'ID Number',value:contact.national_id||contact.passport_number||contact.alien_number||'N/A',width:4},{appliesToType:'!person',appliesIf:()=>'trace_case'===contact.contact_type,label:'Case ID',value:contact&&contact.case_id,width:4},{appliesToType:'!person',appliesIf:()=>/case|trace/.test(contact.contact_type),label:'contact.age',value:contact.date_of_birth,width:4,filter:'age'},{appliesToType:'!person',appliesIf:()=>/case|trace/.test(contact.contact_type),label:'contact.sex',value:'contact.sex.'+contact.sex,translate:!0,width:4},{appliesToType:'!person',appliesIf:()=>/case|trace/.test(contact.contact_type),label:'contact.phone',value:contact&&contact.phone,width:4,filter:'phone'},{appliesToType:'!person',appliesIf:()=>/case|trace/.test(contact.contact_type),label:'ID Number',value:contact.national_id||contact.passport_number||contact.alien_number||'N/A',width:4},{appliesToType:'!person',appliesIf:()=>'trace_contact'===contact.contact_type&&contact.transitioned_to_case,label:'Transitioned to Case?',value:`Yes <a href='/#/contacts/${contact.transitioned_to_case}'><i class=\"fa fa-external-link\" aria-hidden=\"true\"></i> view more</a>`,width:4,filter:'safeHtml'},{appliesToType:'!person',appliesIf:()=>'forwarded_case'===contact.contact_type,label:'Subcounty',value:contact.subcounty||'N/A'},{appliesToType:'!person',appliesIf:()=>'forwarded_case'===contact.contact_type,label:'Ward?',value:contact.ward||'N/A'},{appliesToType:'!person',appliesIf:()=>'forwarded_case'===contact.contact_type,label:'Assigned to tracer?',value:contact.assignee?'Yes':'No'}],a=new Date,o={};o.has_case_investigation=reports.some(e=>'case_investigation'===e.form&&'yes'===e.fields.stop_follow_up),o.monotonic_counter=`${(e=>{const t=new Date(e.getFullYear(),0,0),n=e-t+60*(t.getTimezoneOffset()-e.getTimezoneOffset())*1e3;return Math.floor(n/864e5)})(a)}-${(e=>{const t=new Date;return t.setHours(0),t.setMinutes(0),t.setSeconds(0),t.setMilliseconds(0),parseInt((e-t)/1e3)})(a)}`,e.exports={fields:n,cards:[],context:o}},function(e,t){function n(e){return Array.isArray(e)?e:[e]}function a(e,t,n){if(e.appliesIf(n)){var a='function'==typeof e.fields?e.fields(n):e.fields.filter((function(e){switch(typeof e.appliesIf){case'undefined':return!0;case'function':return e.appliesIf(n);default:return e.appliesIf}})).map((function(e){var t={};return o(e,t,'label'),o(e,t,'value'),o(e,t,'translate'),o(e,t,'filter'),o(e,t,'width'),o(e,t,'icon'),e.context&&(t.context={},o(e.context,t.context,'count'),o(e.context,t.context,'total')),t}));return e.modifyContext&&e.modifyContext(t,n),{label:e.label,fields:a}}function o(e,t,a){switch(typeof e[a]){case'undefined':return;case'function':t[a]=e[a](n);break;default:t[a]=e[a]}}}e.exports=function(e,t,o){var c=e.fields||[],r=e.context||{},i=e.cards||[],s=t&&(t.contact_type||t.type),l={cards:[],fields:c.filter((function(e){var t=n(e.appliesToType),a=t.filter((function(e){return e&&'!'===e.charAt(0)}));if((t.includes(s)||a.length>0&&!a.includes('!'+s))&&(!e.appliesIf||e.appliesIf()))return delete e.appliesToType,delete e.appliesIf,!0}))};return i.forEach((function(e){var t,c,i,p,f=n(e.appliesToType);if(f.includes('report')&&f.length>1)throw new Error('You cannot set appliesToType to an array which includes the type \\'report\\' and another type.');if(f.includes('report'))for(t=0;t<o.length;++t)c=o[t],!(p=c)||p.errors&&p.errors.length||(i=a(e,r,c))&&l.cards.push(i);else{if(!f.includes(s))return;(i=a(e,r))&&l.cards.push(i)}})),l.context=r,l}}])})); return ContactSummary;",
      "tasks":{
