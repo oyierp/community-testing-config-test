@@ -110,7 +110,7 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf: mksCovidTested,
+    passesIf: mksCovidTested,
     date:'now',
   },
 
@@ -123,7 +123,7 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf: kjdCovidTested,
+    passesIf: kjdCovidTested,
     date:'now',
   },
 
@@ -136,7 +136,7 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf: nrbCovidTested,
+    passesIf: nrbCovidTested,
     date:'now',
   },
 
@@ -149,7 +149,7 @@ module.exports = [
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',
     appliesToType:['suspected_case'],
-    appliesIf: msaCovidTested,
+    passesIf: msaCovidTested,
     date:'now',
   },
   
