@@ -328,215 +328,215 @@
         "month_start_date":1,
         "visit_count_goal":0
      },
-     "replication_depth":[
-        {
-           "role":"chw_supervisor",
-           "depth":3
-        }
+  "replication_depth":[
+      {
+      "role":"chw_supervisor",
+      "depth":3
+      }
      ],
-     "contact_types":[
-        {
-           "id":"national_office",
-           "name_key":"contact.type.national_office",
-           "group_key":"contact.type.national_office.plural",
-           "create_key":"contact.type.national_office.new",
-           "edit_key":"contact.type.place.edit",
-           "primary_contact_key":"national_office.field.contact",
-           "parents":[
-              ""
+  "contact_types":[
+      {
+         "id":"national_office",
+         "name_key":"contact.type.national_office",
+         "group_key":"contact.type.national_office.plural",
+         "create_key":"contact.type.national_office.new",
+         "edit_key":"contact.type.place.edit",
+         "primary_contact_key":"national_office.field.contact",
+         "parents":[
+            ""
            ],
-           "icon":"medic-national",
-           "create_form":"form:contact:national_office:create",
-           "edit_form":"form:contact:national_office:edit"
-        },
-        {
-           "id":"county_office",
-           "name_key":"contact.type.county_office",
-           "group_key":"contact.type.county_office.plural",
-           "create_key":"contact.type.county_office.new",
-           "edit_key":"contact.type.place.edit",
-           "primary_contact_key":"county_office.field.contact",
-           "parents":[
-              "national_office"
+         "icon":"medic-national",
+         "create_form":"form:contact:national_office:create",
+         "edit_form":"form:contact:national_office:edit"
+      },
+      {
+         "id":"county_office",
+         "name_key":"contact.type.county_office",
+         "group_key":"contact.type.county_office.plural",
+         "create_key":"contact.type.county_office.new",
+         "edit_key":"contact.type.place.edit",
+         "primary_contact_key":"county_office.field.contact",
+         "parents":[
+            "national_office"
            ],
-           "icon":"medic-county",
-           "create_form":"form:contact:county-office:create",
-           "edit_form":"form:contact:county-office:edit"
-        },
-        {
-           "id":"sub_county_office",
-           "name_key":"contact.type.sub_county_office",
-           "group_key":"contact.type.sub_county_office.plural",
-           "create_key":"contact.type.sub_county_office.new",
-           "edit_key":"contact.type.place.edit",
-           "primary_contact_key":"sub_county_office.field.contact",
-           "parents":[
-              "county_office"
+         "icon":"medic-county",
+         "create_form":"form:contact:county-office:create",
+         "edit_form":"form:contact:county-office:edit"
+      },
+      {
+       "id":"sub_county_office",
+         "name_key":"contact.type.sub_county_office",
+         "group_key":"contact.type.sub_county_office.plural",
+         "create_key":"contact.type.sub_county_office.new",
+         "edit_key":"contact.type.place.edit",
+         "primary_contact_key":"sub_county_office.field.contact",
+         "parents":[
+            "county_office"
            ],
-           "icon":"medic-county",
-           "create_form":"form:contact:sub-county-office:create",
-           "edit_form":"form:contact:sub-county-office:edit"
-        },
-        {
-           "id":"link_facility",
-           "name_key":"contact.type.link_facility",
-           "group_key":"contact.type.link_facility.plural",
-           "create_key":"contact.type.link_facility.new",
-           "edit_key":"contact.type.place.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "icon":"sub-county-hospital",
-           "create_form":"form:contact:link_facility:create",
-           "edit_form":"form:contact:link_facility:edit",
-           "parents":[
+         "icon":"medic-county",
+         "create_form":"form:contact:sub-county-office:create",
+         "edit_form":"form:contact:sub-county-office:edit"
+       },
+       {
+         "id":"link_facility",
+         "name_key":"contact.type.link_facility",
+         "group_key":"contact.type.link_facility.plural",
+         "create_key":"contact.type.link_facility.new",
+         "edit_key":"contact.type.place.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "icon":"sub-county-hospital",
+         "create_form":"form:contact:link_facility:create",
+         "edit_form":"form:contact:link_facility:edit",
+         "parents":[
               "sub_county_office"
            ]
+      },
+      {
+         "id":"community_unit",
+         "name_key":"contact.type.community_unit",
+         "group_key":"cotact.type.community_unit.plural",
+         "create_key":"contact.type.community_unit.new",
+         "edit_key":"contact.type.place.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "parents":[
+            "link_facility"
+           ],
+         "icon":"medic-health-center",
+         "create_form":"form:contact:community_unit:create",
+         "edit_form":"form:contact:community_unit:edit"
         },
         {
-           "id":"community_unit",
-           "name_key":"contact.type.community_unit",
-           "group_key":"contact.type.community_unit.plural",
-           "create_key":"contact.type.community_unit.new",
-           "edit_key":"contact.type.place.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "link_facility"
+         "id":"chw_area",
+         "name_key":"contact.type.chw_area",
+         "group_key":"contact.type.chw_area.plural",
+         "create_key":"contact.type.chw_area.new",
+         "edit_key":"contact.type.chw_area.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "parents":[
+            "community_unit"
            ],
-           "icon":"medic-health-center",
-           "create_form":"form:contact:community_unit:create",
-           "edit_form":"form:contact:community_unit:edit"
+         "icon":"medic-health-worker",
+         "create_form":"form:contact:chw_area:create",
+         "edit_form":"form:contact:chw_area:edit"
         },
         {
-           "id":"chw_area",
-           "name_key":"contact.type.chw_area",
-           "group_key":"contact.type.chw_area.plural",
-           "create_key":"contact.type.chw_area.new",
-           "edit_key":"contact.type.chw_area.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "community_unit"
+         "id":"house_hold",
+         "name_key":"contact.type.house_hold",
+         "group_key":"contact.type.house_hold.plural",
+         "create_key":"contact.type.house_hold.new",
+         "edit_key":"contact.type.house_hold.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "parents":[
+            "chw_area"
            ],
-           "icon":"medic-health-worker",
-           "create_form":"form:contact:chw_area:create",
-           "edit_form":"form:contact:chw_area:edit"
+         "icon":"house-hold",
+         "create_form":"form:contact:house_hold:create",
+         "edit_form":"form:contact:house_hold:edit"
         },
         {
-           "id":"house_hold",
-           "name_key":"contact.type.house_hold",
-           "group_key":"contact.type.house_hold.plural",
-           "create_key":"contact.type.house_hold.new",
-           "edit_key":"contact.type.house_hold.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "chw_area"
+         "id":"national_officer",
+         "name_key":"contact.type.national_officer",
+         "group_key":"contact.type.national_officer.plural",
+         "create_key":"contact.type.national_officer.new",
+         "edit_key":"contact.type.national_officer.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "parents":[
+           "national_office"
            ],
-           "icon":"house-hold",
-           "create_form":"form:contact:house_hold:create",
-           "edit_form":"form:contact:house_hold:edit"
+         "icon":"medic-health-worker",
+         "create_form":"form:contact:national_officer:create",
+         "edit_form":"form:contact:national_officer:edit",
+         "person":true
         },
         {
-           "id":"national_officer",
-           "name_key":"contact.type.national_officer",
-           "group_key":"contact.type.national_officer.plural",
-           "create_key":"contact.type.national_officer.new",
-           "edit_key":"contact.type.national_officer.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "national_office"
+         "id":"county_officer",
+         "name_key":"contact.type.county_officer",
+         "group_key":"contact.type.county_officer.plural",
+         "create_key":"contact.type.county_officer.new",
+         "edit_key":"contact.type.county_officer.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "parents":[
+            "county_office"
            ],
-           "icon":"medic-health-worker",
-           "create_form":"form:contact:national_officer:create",
-           "edit_form":"form:contact:national_officer:edit",
-           "person":true
+         "icon":"medic-health-worker",
+         "create_form":"form:contact:county_officer:create",
+         "edit_form":"form:contact:county_officer:edit",
+         "person":true
         },
         {
-           "id":"county_officer",
-           "name_key":"contact.type.county_officer",
-           "group_key":"contact.type.county_officer.plural",
-           "create_key":"contact.type.county_officer.new",
-           "edit_key":"contact.type.county_officer.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "county_office"
+         "id":"sub_county_officer",
+         "name_key":"contact.type.sub_county_officer",
+         "group_key":"contact.type.sub_county_officer.plural",
+         "create_key":"contact.type.sub_county_officer.new",
+         "edit_key":"contact.type.sub_county_officer.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "parents":[
+            "sub_county_office"
            ],
-           "icon":"medic-health-worker",
-           "create_form":"form:contact:county_officer:create",
-           "edit_form":"form:contact:county_officer:edit",
-           "person":true
+         "icon":"medic-health-worker",
+         "create_form":"form:contact:sub_county_officer:create",
+         "edit_form":"form:contact:sub_county_officer:edit",
+         "person":true
         },
         {
-           "id":"sub_county_officer",
-           "name_key":"contact.type.sub_county_officer",
-           "group_key":"contact.type.sub_county_officer.plural",
-           "create_key":"contact.type.sub_county_officer.new",
-           "edit_key":"contact.type.sub_county_officer.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "sub_county_office"
+         "id":"chw_supervisor",
+         "name_key":"contact.type.chw_supervisor",
+         "group_key":"contact.type.chw_supervisor.plural",
+         "create_key":"contact.type.chw_superviso.new",
+         "edit_key":"contact.type.chw_supervisor.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "parents":[
+            "link_facility"
            ],
-           "icon":"medic-health-worker",
-           "create_form":"form:contact:sub_county_officer:create",
-           "edit_form":"form:contact:sub_county_officer:edit",
-           "person":true
+         "icon":"medic-health-worker",
+         "create_form":"form:contact:chw_supervisor:create",
+         "edit_form":"form:contact:chw_supervisor:edit",
+         "person":true
         },
         {
-           "id":"chw_supervisor",
-           "name_key":"contact.type.chw_supervisor",
-           "group_key":"contact.type.chw_supervisor.plural",
-           "create_key":"contact.type.chw_superviso.new",
-           "edit_key":"contact.type.chw_supervisor.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "link_facility"
+         "id":"nurse",
+         "name_key":"contact.type.nurse",
+         "group_key":"contact.type.nurse.plural",
+         "create_key":"contact.type.nurse.new",
+         "edit_key":"contact.type.nurse.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "parents":[
+            "link_facility"
            ],
-           "icon":"medic-health-worker",
-           "create_form":"form:contact:chw_supervisor:create",
-           "edit_form":"form:contact:chw_supervisor:edit",
-           "person":true
+         "icon":"nurse",
+         "create_form":"form:contact:nurse:create",
+         "edit_form":"form:contact:nurse:edit",
+         "person":true
         },
         {
-           "id":"nurse",
-           "name_key":"contact.type.nurse",
-           "group_key":"contact.type.nurse.plural",
-           "create_key":"contact.type.nurse.new",
-           "edit_key":"contact.type.nurse.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "link_facility"
+         "id":"lab_tech",
+         "name_key":"contact.type.lab_tech",
+         "group_key":"contact.type.lab_tech.plural",
+         "create_key":"contact.type.lab_tech.new",
+         "edit_key":"contact.type.lab_tech.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "parents":[
+            "link_facility"
            ],
-           "icon":"nurse",
-           "create_form":"form:contact:nurse:create",
-           "edit_form":"form:contact:nurse:edit",
-           "person":true
+         "icon":"lab_tech",
+         "create_form":"form:contact:lab_tech:create",
+         "edit_form":"form:contact:lab_tech:edit",
+         "person":true
         },
         {
-           "id":"lab_tech",
-           "name_key":"contact.type.lab_tech",
-           "group_key":"contact.type.lab_tech.plural",
-           "create_key":"contact.type.lab_tech.new",
-           "edit_key":"contact.type.lab_tech.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "link_facility"
+         "id":"chw",
+         "name_key":"contact.type.chw",
+         "group_key":"contact.type.chw.plural",
+         "create_key":"contact.type.chw.new",
+         "edit_key":"contact.type.chw.edit",
+         "primary_contact_key":"link_facility.field.contact",
+         "parents":[
+            "chw_area"
            ],
-           "icon":"lab_tech",
-           "create_form":"form:contact:lab_tech:create",
-           "edit_form":"form:contact:lab_tech:edit",
-           "person":true
-        },
-        {
-           "id":"chw",
-           "name_key":"contact.type.chw",
-           "group_key":"contact.type.chw.plural",
-           "create_key":"contact.type.chw.new",
-           "edit_key":"contact.type.chw.edit",
-           "primary_contact_key":"link_facility.field.contact",
-           "parents":[
-              "chw_area"
-           ],
-           "icon":"medic-health-worker",
-           "create_form":"form:contact:chw:create",
-           "edit_form":"form:contact:chw:edit",
-           "person":true
+         "icon":"medic-health-worker",
+         "create_form":"form:contact:chw:create",
+         "edit_form":"form:contact:chw:edit",
+         "person":true
         }
       ],
      "setup_complete":true,
