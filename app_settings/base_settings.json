@@ -14,6 +14,14 @@
    "date_format":"D MMM, YYYY",
    "reported_date_format":"DD-MMM-YYYY HH:mm:ss",
    "forms_only_mode":false,
+
+   "uhc": {
+      "contacts_default_sort": "last_visited_date",
+      "visit_count": {
+        "month_start_date": 1,
+        "visit_count_goal": 1
+      }
+      },
    "place_hierarchy_types":[
       "national_office",
       "county_office",
@@ -26,7 +34,7 @@
    "default_responses":{
      "start_date":""
    },
-   "sub_county_admins_access_unallocated_messages":false,
+   "district_admins_access_unallocated_messages":false,
    "public_access":false,
    "default_country_code":254,
    "gateway_number":"+254798217246",
@@ -317,14 +325,13 @@
         "chw_supervisor"
      ]
   },
-
    "changes_controller":{
-     "reiterate_changes":true,
-     "changes_limit":100,
-     "debounce_interval":200
+   "reiterate_changes":true,
+   "changes_limit":100,
+   "debounce_interval":200
   },
-
-   "contact_types":[
+  
+  "contact_types":[
       {
          "id":"national_office",
          "name_key":"contact.type.national_office",
@@ -332,9 +339,6 @@
          "create_key":"contact.type.national_office.new",
          "edit_key":"contact.type.place.edit",
          "primary_contact_key":"national_office.field.contact",
-         "parents":[
-            ""
-           ],
          "icon":"medic-national",
          "create_form":"form:contact:national_office:create",
          "edit_form":"form:contact:national_office:edit"
@@ -593,12 +597,7 @@
            }
         ]
       },
-      "uhc":{
-         "contacts_default_sort":"",
-         "visit_count":{
-            "month_start_date":1,
-            "visit_count_goal":0
-         },
+      
       "replications":[
         {
            "fromSuffix":"user-[^\\-]+-meta",
