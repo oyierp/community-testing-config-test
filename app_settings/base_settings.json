@@ -324,18 +324,6 @@
      "debounce_interval":200
   },
 
-   "uhc":{
-     "contacts_default_sort":"",
-     "visit_count":{
-        "month_start_date":1,
-        "visit_count_goal":0
-     },
-   "replication_depth":[
-      {
-      "role":"chw_supervisor",
-      "depth":3
-      }
-   ],
    "contact_types":[
       {
          "id":"national_office",
@@ -605,6 +593,12 @@
            }
         ]
       },
+      "uhc":{
+         "contacts_default_sort":"",
+         "visit_count":{
+            "month_start_date":1,
+            "visit_count_goal":0
+         },
       "replications":[
         {
            "fromSuffix":"user-[^\\-]+-meta",
@@ -613,6 +607,12 @@
            "cron":"0 2 * * *"
         }
       ],
+      "replication_depth":[
+          {
+          "role":"chw_supervisor",
+          "depth":3
+          }
+       ],
       "sms":{
         "outgoing_service":"medic-gateway"
       },
