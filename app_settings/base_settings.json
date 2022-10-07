@@ -143,6 +143,7 @@
         "sub_county_focal_person",
         "gateway",
         "program_officer",
+        "chw_supervisor",
         "chw"
      ],
      "can_edit_profile":[
@@ -156,6 +157,7 @@
         "national_admin",
         "sub_county_focal_person",
         "program_officer",
+        "chw_supervisor",
         "chw"
      ],
      "can_export_all":[
@@ -235,16 +237,14 @@
         "program_officer",
         "sub_county_focal_person",
         "county_focal_person",
-        "chw_supervisor",
-        "chw"
+        "chw_supervisor"
      ],
      "can_view_analytics_tab":[
         "national_admin",
         "program_officer",
         "sub_county_focal_person",
         "county_focal_person",
-        "chw_supervisor",
-        "chw"
+        "chw_supervisor"
      ],
      "can_view_call_action":[
         "national_admin",
@@ -256,8 +256,7 @@
      "can_view_contacts":[
         "national_admin",
         "program_officer",
-        "sub_county_focal_person",
-        "chw_supervisor"
+        "sub_county_focal_person"
      ],
      "can_view_contacts_tab":[
         "national_admin",
@@ -271,8 +270,7 @@
         "gateway",
         "program_officer",
         "county_focal_person",
-        "sub_county_focal_person",
-        "chw_supervisor"
+        "sub_county_focal_person"
      ],
      "can_view_last_visited_date":[
         
@@ -421,6 +419,22 @@
          "edit_form":"form:contact:house_hold:edit"
         },
         {
+         "id": "suspected_case",
+         "name_key": "contact.type.suspected_case",
+         "group_key": "contact.type.suspected_case.plural",
+         "create_key": "contact.type.suspected_case.new",
+         "edit_key": "contact.type.place.edit",
+         "primary_contact_key": "trace_case.field.contact",
+         "parents": [
+           "link_facility",
+           "house_hold"
+         ],
+         "icon": "medic-covid-suspect",
+         "create_form": "form:contact:suspected_case:create",
+         "edit_form": "form:contact:suspected_case:edit",
+         "count_visits": true
+       },
+         {
          "id":"national_officer",
          "name_key":"contact.type.national_officer",
          "group_key":"contact.type.national_officer.plural",
