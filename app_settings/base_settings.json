@@ -116,7 +116,8 @@
         "data_entry",
         "gateway",
         "program_officer",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw"
      ],
      "can_create_users":[
         "national_admin",
@@ -142,18 +143,21 @@
         "national_admin",
         "sub_county_focal_person",
         "gateway",
-        "program_officer"
+        "program_officer",
+        "chw"
      ],
      "can_edit_profile":[
         "national_admin",
         "sub_county_focal_person",
         "program_officer",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw"
      ],
      "can_edit_verification":[
         "national_admin",
         "sub_county_focal_person",
-        "program_officer"
+        "program_officer",
+        "chw"
      ],
      "can_export_all":[
         "national_admin",
@@ -202,7 +206,8 @@
      "can_update_people":[
         "national_admin",
         "program_officer",
-        "sub_county_focal_person"
+        "sub_county_focal_person",
+        "chw"
      ],
      "can_update_places":[
         "national_admin",
@@ -222,7 +227,8 @@
         "national_admin",
         "program_officer",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw"
      ],
      "can_view_analytics":[
         "national_admin",
@@ -237,7 +243,8 @@
         "program_officer",
         "sub_county_focal_person",
         "county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw"
      ],
      "can_view_call_action":[
         "national_admin",
