@@ -354,8 +354,8 @@
             "national_office"
            ],
          "icon":"medic-county",
-         "create_form":"form:contact:county-office:create",
-         "edit_form":"form:contact:county-office:edit"
+         "create_form":"form:contact:county_office:create",
+         "edit_form":"form:contact:county_office:edit"
       },
       {
        "id":"sub_county_office",
@@ -368,8 +368,8 @@
             "county_office"
            ],
          "icon":"medic-county",
-         "create_form":"form:contact:sub-county-office:create",
-         "edit_form":"form:contact:sub-county-office:edit"
+         "create_form":"form:contact:sub_county_office:create",
+         "edit_form":"form:contact:sub_county_office:edit"
        },
        {
          "id":"link_facility",
@@ -638,7 +638,7 @@
            }
          },
          "case_investigation":{
-           "relevant_to":"doc.type === 'data_record' && doc.form === 'case_investigation' && doc.fields.stop_follow_up === 'yes'",
+           "relevant_to":"doc.type === 'data_record' && doc.form === 'case_investigation'",
            "destination":{
               "base_url":"https://data.kenyahmis.org:7001",
               "auth":{
