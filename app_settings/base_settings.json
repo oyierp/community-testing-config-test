@@ -116,7 +116,9 @@
         "gateway",
         "program_officer",
         "chw_supervisor",
-        "chw"
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_create_users":[
         "national_admin",
@@ -144,21 +146,23 @@
         "gateway",
         "program_officer",
         "chw_supervisor",
-        "chw"
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_edit_profile":[
         "national_admin",
         "sub_county_focal_person",
-        "program_officer",
-        "chw_supervisor",
-        "chw"
+        "program_officer"
      ],
      "can_edit_verification":[
         "national_admin",
         "sub_county_focal_person",
         "program_officer",
         "chw_supervisor",
-        "chw"
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_export_all":[
         "national_admin",
@@ -171,8 +175,7 @@
      "can_export_contacts":[
         "national_admin",
         "program_officer",
-        "sub_county_focal_person",
-        "chw_supervisor"
+        "sub_county_focal_person"
      ],
      "can_export_feedback":[
         "national_admin",
@@ -182,15 +185,17 @@
         "national_admin",
         "analytics",
         "program_officer",
-        "sub_county_focal_person",
-        "chw_supervisor"
+        "sub_county_focal_person"
      ],
      "can_export_messages":[
         "national_admin",
         "analytics",
         "program_officer",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_log_out_on_android":[
         "national_admin",
@@ -208,7 +213,11 @@
         "national_admin",
         "program_officer",
         "sub_county_focal_person",
-        "chw"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
+
      ],
      "can_update_places":[
         "national_admin",
@@ -229,7 +238,9 @@
         "program_officer",
         "sub_county_focal_person",
         "chw_supervisor",
-        "chw"
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_analytics":[
         "national_admin",
@@ -251,18 +262,28 @@
         "program_officer",
         "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_contacts":[
         "national_admin",
         "program_officer",
-        "sub_county_focal_person"
+        "sub_county_focal_person",
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_contacts_tab":[
         "national_admin",
         "program_officer",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_data_records":[
         "national_admin",
