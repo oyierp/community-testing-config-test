@@ -508,7 +508,8 @@
          "edit_key":"contact.type.chw_supervisor.edit",
          "primary_contact_key":"link_facility.field.contact",
          "parents":[
-            "link_facility"
+            "link_facility",
+            "chw_area"
            ],
          "icon":"medic-health-worker",
          "create_form":"form:contact:chw_supervisor:create",
@@ -636,9 +637,12 @@
       ],
       "replication_depth":[
           {
-          "role":"chw_supervisor",
-          "depth":3
-          }
+          "role":"chw_supervisor", "depth":3, "report_depth": 1 
+          },
+          {
+            "role":"chw", "depth":3, "report_depth": 1 
+         }
+
        ],
       "sms":{
         "outgoing_service":"medic-gateway"
