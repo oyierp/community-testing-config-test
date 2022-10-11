@@ -94,7 +94,11 @@
      ],
      "can_bulk_delete_reports":[
         "national_admin",
-        "program_officer"
+        "program_officer",
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_configure":[
         "national_admin",
@@ -110,6 +114,7 @@
      ],
      "can_create_records":[
         "national_admin",
+        "program_officer",
         "data_entry",
         "gateway",
         "program_officer",
@@ -140,7 +145,7 @@
      ],
      "can_edit":[
         "national_admin",
-        "sub_county_focal_person",
+        "program_officer",
         "gateway",
         "program_officer",
         "chw_supervisor",
@@ -150,11 +155,17 @@
      ],
      "can_edit_profile":[
         "national_admin",
+        "county_focal_person",
         "sub_county_focal_person",
-        "program_officer"
+        "program_officer",
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_edit_verification":[
         "national_admin",
+        "county_focal_person",
         "sub_county_focal_person",
         "program_officer",
         "chw_supervisor",
@@ -173,16 +184,21 @@
      "can_export_contacts":[
         "national_admin",
         "program_officer",
+        "county_focal_person",
         "sub_county_focal_person"
      ],
      "can_export_feedback":[
         "national_admin",
-        "program_officer"
+        "program_officer",
+        "county_focal_person",
+        "sub_county_focal_person"
+
      ],
      "can_export_forms":[
         "national_admin",
         "analytics",
         "program_officer",
+        "county_focal_person",
         "sub_county_focal_person"
      ],
      "can_export_messages":[
@@ -199,6 +215,7 @@
         "national_admin",
         "program_officer",
         "gateway",
+        "county_focal_person",
         "sub_county_focal_person"
      ],
      "can_update_messages":[
@@ -209,23 +226,20 @@
      ],
      "can_update_people":[
         "national_admin",
+        "program_officer"
+     ],
+     "can_update_places":[
+        "national_admin",
+        "program_officer"
+     ],
+     "can_update_reports":[
+        "national_admin",
         "program_officer",
         "sub_county_focal_person",
         "chw_supervisor",
         "chw",
         "lab_tech",
         "nurse"
-
-     ],
-     "can_update_places":[
-        "national_admin",
-        "program_officer",
-        "sub_county_focal_person"
-     ],
-     "can_update_reports":[
-        "national_admin",
-        "program_officer",
-        "sub_county_focal_person"
      ],
      "can_update_users":[
         "national_admin",
@@ -268,20 +282,16 @@
      "can_view_contacts":[
         "national_admin",
         "program_officer",
+        "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "chw_supervisor"
      ],
      "can_view_contacts_tab":[
         "national_admin",
         "program_officer",
+        "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "chw_supervisor"
      ],
      "can_view_data_records":[
         "national_admin",
@@ -289,7 +299,8 @@
         "gateway",
         "program_officer",
         "county_focal_person",
-        "sub_county_focal_person"
+        "sub_county_focal_person",
+        "chw_supervisor"
      ],
      "can_view_last_visited_date":[
         
@@ -305,7 +316,9 @@
      ],
      "can_view_outgoing_messages":[
         "national_admin",
-        "program_officer"
+        "program_officer",
+        "county_focal_person",
+        "sub_county_focal_person"
      ],
      "can_view_reports":[
         "national_admin",
@@ -322,12 +335,20 @@
         "chw_supervisor"
      ],
      "can_view_tasks":[
+        "county_focal_person",  
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_tasks_tab":[
+        "county_focal_person", 
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_unallocated_data_records":[
         "national_admin",
@@ -335,11 +356,15 @@
         "program_officer",
         "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_users":[
         "national_admin",
         "program_officer",
+        "county_focal_person",
         "sub_county_focal_person"
      ],
      "can_write_wealth_quintiles":[
@@ -348,13 +373,26 @@
      "can_aggregate_targets":[
         "chw_supervisor"
      ]
-  },
+   },
    "changes_controller":{
    "reiterate_changes":true,
    "changes_limit":100,
    "debounce_interval":200
   },
-  
+  "replication_depth":[
+   {
+   "role":"chw_supervisor", "depth":3 
+   },
+   {
+     "role":"chw", "depth":3 
+  },
+  {
+     "role":"lab_tech", "depth":3 
+  },
+  {
+     "role":"nurse", "depth":3
+  }
+  ],
   "contact_types":[
       {
          "id":"national_office",
@@ -446,7 +484,7 @@
          "primary_contact_key": "trace_case.field.contact",
          "parents": [
            "link_facility",
-           "house_hold"
+           "house_hold"              
          ],
          "icon": "medic-covid-suspect",
          "create_form": "form:contact:suspected_case:create",
@@ -633,15 +671,7 @@
            "cron":"0 2 * * *"
         }
       ],
-      "replication_depth":[
-          {
-          "role":"chw_supervisor", "depth":3, "report_depth": 1 
-          },
-          {
-            "role":"chw", "depth":3, "report_depth": 1 
-         }
-
-       ],
+      
       "sms":{
         "outgoing_service":"medic-gateway"
       },
