@@ -51,7 +51,7 @@
    "contact_display_short":"clinic.name",
    "roles":{
      "data_entry":{
-        "name":"usertype.data-entry"
+        "name":"usertype.data_entry"
      },
      "analytics":{
         "name":"usertype.analytics"
@@ -60,19 +60,19 @@
         "name":"usertype.gateway"
      },
      "program_officer":{
-        "name":"usertype.program-officer"
+        "name":"usertype.program_officer"
      },
      "national_admin":{
-        "name":"usertype.national-admin"
+        "name":"usertype.national_admin"
      },
      "county_focal_person":{
-        "name":"usertype.county-focal-person"
+        "name":"usertype.county_focal_person"
      },
      "sub_county_focal_person":{
-        "name":"usertype.sub-county-focal-person"
+        "name":"usertype.sub_county_focal_person"
      },
      "chw_supervisor":{
-        "name":"usertype.chw-supervisor",
+        "name":"usertype.chw_supervisor",
         "offline":true
      },
      "chw":{
@@ -84,7 +84,7 @@
         "offline":true
      },
      "lab_tech":{
-        "name":"usertype.lab-tech",
+        "name":"usertype.lab_tech",
         "offline":true
      }
    },
