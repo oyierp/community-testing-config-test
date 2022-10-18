@@ -94,11 +94,7 @@
      ],
      "can_bulk_delete_reports":[
         "national_admin",
-        "program_officer",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "program_officer"
      ],
      "can_configure":[
         "national_admin",
@@ -158,20 +154,13 @@
         "county_focal_person",
         "sub_county_focal_person",
         "program_officer",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "chw_supervisor"
      ],
      "can_edit_verification":[
         "national_admin",
         "county_focal_person",
         "sub_county_focal_person",
-        "program_officer",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "program_officer"
      ],
      "can_export_all":[
         "national_admin",
@@ -185,31 +174,27 @@
         "national_admin",
         "program_officer",
         "county_focal_person",
-        "sub_county_focal_person"
+        "sub_county_focal_person",
+        "chw_supervisor"
      ],
      "can_export_feedback":[
         "national_admin",
-        "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person"
-
+        "program_officer"
      ],
      "can_export_forms":[
         "national_admin",
         "analytics",
         "program_officer",
         "county_focal_person",
-        "sub_county_focal_person"
+        "sub_county_focal_person",
+        "chw_supervisor"       
      ],
      "can_export_messages":[
         "national_admin",
         "analytics",
         "program_officer",
         "sub_county_focal_person",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "chw_supervisor"
      ],
      "can_log_out_on_android":[
         "national_admin",
@@ -234,12 +219,7 @@
      ],
      "can_update_reports":[
         "national_admin",
-        "program_officer",
-        "sub_county_focal_person",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "program_officer"
      ],
      "can_update_users":[
         "national_admin",
@@ -249,10 +229,7 @@
         "national_admin",
         "program_officer",
         "sub_county_focal_person",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "chw_supervisor"
      ],
      "can_view_analytics":[
         "national_admin",
@@ -274,10 +251,7 @@
         "program_officer",
         "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "chw_supervisor"
      ],
      "can_view_contacts":[
         "national_admin",
@@ -303,22 +277,32 @@
         "chw_supervisor"
      ],
      "can_view_last_visited_date":[
-        
+      "sub_county_focal_person"
      ],
      "can_view_message_action":[
-        
-     ],
-     "can_view_messages":[
-        
-     ],
-     "can_view_messages_tab":[
-        
-     ],
-     "can_view_outgoing_messages":[
         "national_admin",
         "program_officer",
         "county_focal_person",
-        "sub_county_focal_person"
+        "sub_county_focal_person",
+        "chw_supervisor"
+     ],
+     "can_view_messages":[
+        "national_admin",
+        "program_officer",
+        "county_focal_person",
+        "sub_county_focal_person",
+        "chw_supervisor"
+     ],
+     "can_view_messages_tab":[
+        "national_admin",
+        "program_officer",
+        "county_focal_person",
+        "sub_county_focal_person",
+        "chw_supervisor"
+     ],
+     "can_view_outgoing_messages":[
+        "national_admin",
+        "program_officer"
      ],
      "can_view_reports":[
         "national_admin",
@@ -337,18 +321,12 @@
      "can_view_tasks":[
         "county_focal_person",  
         "sub_county_focal_person",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "chw_supervisor"
      ],
      "can_view_tasks_tab":[
         "county_focal_person", 
         "sub_county_focal_person",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "chw_supervisor"
      ],
      "can_view_unallocated_data_records":[
         "national_admin",
@@ -356,16 +334,11 @@
         "program_officer",
         "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "chw_supervisor"
      ],
      "can_view_users":[
         "national_admin",
-        "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person"
+        "program_officer"
      ],
      "can_write_wealth_quintiles":[
         "sub_county_focal_person"
@@ -453,7 +426,7 @@
          "group_key":"contact.type.chw_area.plural",
          "create_key":"contact.type.chw_area.new",
          "edit_key":"contact.type.chw_area.edit",
-         "primary_contact_key":"link_facility.field.contact",
+         "primary_contact_key":"chw_area.field.contact",
          "parents":[
             "link_facility"
            ],
@@ -467,7 +440,7 @@
          "group_key":"contact.type.house_hold.plural",
          "create_key":"contact.type.house_hold.new",
          "edit_key":"contact.type.house_hold.edit",
-         "primary_contact_key":"link_facility.field.contact",
+         "primary_contact_key":"house_hold.field.contact",
          "parents":[
             "chw_area"
            ],
@@ -481,7 +454,7 @@
          "group_key": "contact.type.suspected_case.plural",
          "create_key": "contact.type.suspected_case.new",
          "edit_key": "contact.type.place.edit",
-         "primary_contact_key": "trace_case.field.contact",
+         "primary_contact_key": "suspected_case.field.contact",
          "parents": [
            "link_facility",
            "house_hold"              
@@ -542,7 +515,7 @@
          "group_key":"contact.type.chw_supervisor.plural",
          "create_key":"contact.type.chw_superviso.new",
          "edit_key":"contact.type.chw_supervisor.edit",
-         "primary_contact_key":"link_facility.field.contact",
+         "primary_contact_key":"chw_supervisor.field.contact",
          "parents":[
             "link_facility",
             "chw_area"
@@ -558,7 +531,7 @@
          "group_key":"contact.type.nurse.plural",
          "create_key":"contact.type.nurse.new",
          "edit_key":"contact.type.nurse.edit",
-         "primary_contact_key":"link_facility.field.contact",
+         "primary_contact_key":"nurse.field.contact",
          "parents":[
             "link_facility"
            ],
@@ -573,7 +546,7 @@
          "group_key":"contact.type.lab_tech.plural",
          "create_key":"contact.type.lab_tech.new",
          "edit_key":"contact.type.lab_tech.edit",
-         "primary_contact_key":"link_facility.field.contact",
+         "primary_contact_key":"lab_tech.field.contact",
          "parents":[
             "link_facility"
            ],
@@ -588,7 +561,7 @@
          "group_key":"contact.type.chw.plural",
          "create_key":"contact.type.chw.new",
          "edit_key":"contact.type.chw.edit",
-         "primary_contact_key":"link_facility.field.contact",
+         "primary_contact_key":"chw.field.contact",
          "parents":[
             "chw_area"
            ],
