@@ -102,11 +102,18 @@
      ],
      "can_create_people":[
         "national_admin",
-        "program_officer"
+        "program_officer",
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_create_places":[
         "national_admin",
-        "program_officer"
+        "program_officer",
+        "program_officer",
+        "chw_supervisor",
+        "chw"
      ],
      "can_create_records":[
         "national_admin",
@@ -207,19 +214,35 @@
         "national_admin",
         "gateway",
         "program_officer",
-        "sub_county_focal_person"
+        "sub_county_focal_person",
+        "chw_supervisor"
      ],
      "can_update_people":[
         "national_admin",
-        "program_officer"
+        "program_officer",
+        "sub_county_focal_person",
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_update_places":[
         "national_admin",
-        "program_officer"
+        "program_officer",
+        "sub_county_focal_person",
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_update_reports":[
         "national_admin",
-        "program_officer"
+        "program_officer",
+        "sub_county_focal_person",
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_update_users":[
         "national_admin",
@@ -229,7 +252,10 @@
         "national_admin",
         "program_officer",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_analytics":[
         "national_admin",
@@ -258,14 +284,20 @@
         "program_officer",
         "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_contacts_tab":[
         "national_admin",
         "program_officer",
         "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_data_records":[
         "national_admin",
@@ -274,59 +306,57 @@
         "program_officer",
         "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
-     "can_view_last_visited_date":[
-      "sub_county_focal_person"
-     ],
-     "can_view_message_action":[
-        "national_admin",
-        "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person",
-        "chw_supervisor"
-     ],
-     "can_view_messages":[
-        "national_admin",
-        "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person",
-        "chw_supervisor"
-     ],
-     "can_view_messages_tab":[
-        "national_admin",
-        "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person",
-        "chw_supervisor"
-     ],
+     "can_view_last_visited_date":[],
+     "can_view_message_action":[],
+     "can_view_messages":[],
+     "can_view_messages_tab":[],
      "can_view_outgoing_messages":[
         "national_admin",
-        "program_officer"
+        "program_officer",
+        "county_focal_person",
+        "sub_county_focal_person",
+        "chw_supervisor"
      ],
      "can_view_reports":[
         "national_admin",
         "program_officer",
         "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_reports_tab":[
         "national_admin",
         "program_officer",
         "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_tasks":[
         "county_focal_person",  
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_tasks_tab":[
         "county_focal_person", 
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_unallocated_data_records":[
         "national_admin",
@@ -334,7 +364,10 @@
         "program_officer",
         "county_focal_person",
         "sub_county_focal_person",
-        "chw_supervisor"
+        "chw_supervisor",
+        "chw",
+        "lab_tech",
+        "nurse"
      ],
      "can_view_users":[
         "national_admin",
