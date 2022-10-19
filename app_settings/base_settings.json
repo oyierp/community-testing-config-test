@@ -79,12 +79,8 @@
         "name":"usertype.chw",
         "offline":true
      },
-     "nurse":{
-        "name":"usertype.nurse",
-        "offline":true
-     },
-     "lab_tech":{
-        "name":"usertype.lab_tech",
+     "health_worker":{
+        "name":"usertype.health_worker",
         "offline":true
      }
    },
@@ -104,16 +100,13 @@
         "national_admin",
         "program_officer",
         "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
+        "chw"
      ],
      "can_create_places":[
         "national_admin",
         "program_officer",
         "program_officer",
-        "chw_supervisor",
-        "chw"
+        "chw_supervisor"
      ],
      "can_create_records":[
         "national_admin",
@@ -123,8 +116,7 @@
         "program_officer",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_create_users":[
         "national_admin",
@@ -153,8 +145,7 @@
         "program_officer",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_edit_profile":[
         "national_admin",
@@ -220,29 +211,20 @@
      "can_update_people":[
         "national_admin",
         "program_officer",
-        "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_update_places":[
         "national_admin",
-        "program_officer",
-        "sub_county_focal_person",
-        "chw_supervisor",
-        "chw",
-        "lab_tech",
-        "nurse"
-     ],
+        "program_officer"
+      ],
      "can_update_reports":[
         "national_admin",
         "program_officer",
-        "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_update_users":[
         "national_admin",
@@ -254,8 +236,7 @@
         "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_view_analytics":[
         "national_admin",
@@ -282,81 +263,58 @@
      "can_view_contacts":[
         "national_admin",
         "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_view_contacts_tab":[
         "national_admin",
         "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_view_data_records":[
         "national_admin",
         "analytics",
         "gateway",
         "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_view_last_visited_date":[],
      "can_view_message_action":[],
      "can_view_messages":[],
      "can_view_messages_tab":[],
-     "can_view_outgoing_messages":[
-        "national_admin",
-        "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person",
-        "chw_supervisor"
-     ],
+     "can_view_outgoing_messages":[],
      "can_view_reports":[
         "national_admin",
         "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_view_reports_tab":[
         "national_admin",
         "program_officer",
-        "county_focal_person",
-        "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_view_tasks":[
         "county_focal_person",  
         "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_view_tasks_tab":[
         "county_focal_person", 
         "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_view_unallocated_data_records":[
         "national_admin",
@@ -366,8 +324,7 @@
         "sub_county_focal_person",
         "chw_supervisor",
         "chw",
-        "lab_tech",
-        "nurse"
+        "health_worker"
      ],
      "can_view_users":[
         "national_admin",
@@ -393,10 +350,7 @@
      "role":"chw", "depth":3 
   },
   {
-     "role":"lab_tech", "depth":3 
-  },
-  {
-     "role":"nurse", "depth":3
+     "role":"health_worker", "depth":3 
   }
   ],
   "contact_types":[
@@ -503,7 +457,7 @@
          "group_key":"contact.type.national_officer.plural",
          "create_key":"contact.type.national_officer.new",
          "edit_key":"contact.type.national_officer.edit",
-         "primary_contact_key":"link_facility.field.contact",
+         "primary_contact_key":"national_officer.field.contact",
          "parents":[
            "national_office"
            ],
@@ -518,7 +472,7 @@
          "group_key":"contact.type.county_officer.plural",
          "create_key":"contact.type.county_officer.new",
          "edit_key":"contact.type.county_officer.edit",
-         "primary_contact_key":"link_facility.field.contact",
+         "primary_contact_key":"county_officer.field.contact",
          "parents":[
             "county_office"
            ],
@@ -533,7 +487,7 @@
          "group_key":"contact.type.sub_county_officer.plural",
          "create_key":"contact.type.sub_county_officer.new",
          "edit_key":"contact.type.sub_county_officer.edit",
-         "primary_contact_key":"link_facility.field.contact",
+         "primary_contact_key":"sub_county_officer.field.contact",
          "parents":[
             "sub_county_office"
            ],
@@ -546,12 +500,11 @@
          "id":"chw_supervisor",
          "name_key":"contact.type.chw_supervisor",
          "group_key":"contact.type.chw_supervisor.plural",
-         "create_key":"contact.type.chw_superviso.new",
+         "create_key":"contact.type.chw_supervisor.new",
          "edit_key":"contact.type.chw_supervisor.edit",
          "primary_contact_key":"chw_supervisor.field.contact",
          "parents":[
-            "link_facility",
-            "chw_area"
+            "sub_county_office"
            ],
          "icon":"medic-health-worker",
          "create_form":"form:contact:chw_supervisor:create",
@@ -559,33 +512,18 @@
          "person":true
         },
         {
-         "id":"nurse",
-         "name_key":"contact.type.nurse",
-         "group_key":"contact.type.nurse.plural",
-         "create_key":"contact.type.nurse.new",
-         "edit_key":"contact.type.nurse.edit",
-         "primary_contact_key":"nurse.field.contact",
+         "id":"health_worker",
+         "name_key":"contact.type.health_worker",
+         "group_key":"contact.type.health_worker.plural",
+         "create_key":"contact.type.health_worker.new",
+         "edit_key":"contact.type.health_worker.edit",
+         "primary_contact_key":"health_worker.field.contact",
          "parents":[
             "link_facility"
            ],
-         "icon":"nurse",
-         "create_form":"form:contact:nurse:create",
-         "edit_form":"form:contact:nurse:edit",
-         "person":true
-        },
-        {
-         "id":"lab_tech",
-         "name_key":"contact.type.lab_tech",
-         "group_key":"contact.type.lab_tech.plural",
-         "create_key":"contact.type.lab_tech.new",
-         "edit_key":"contact.type.lab_tech.edit",
-         "primary_contact_key":"lab_tech.field.contact",
-         "parents":[
-            "link_facility"
-           ],
-         "icon":"lab_tech",
-         "create_form":"form:contact:lab_tech:create",
-         "edit_form":"form:contact:lab_tech:edit",
+         "icon":"health_worker",
+         "create_form":"form:contact:health_worker:create",
+         "edit_form":"form:contact:health_worker:edit",
          "person":true
         },
         {
