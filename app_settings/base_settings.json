@@ -98,18 +98,23 @@
       "can_create_people":[
          "national_admin",
          "program_officer",
+         "chw_supervisor",
          "health_worker",
          "chw"
       ],
       "can_create_places":[
          "national_admin",
-         "program_officer"
+         "program_officer",
+         "chw_supervisor",
+         "health_worker",
+         "chw"
       ],
       "can_create_records":[
          "national_admin",
          "program_officer",
          "data_entry",
          "gateway",
+         "chw_supervisor",
          "health_worker",
          "chw"
       ],
@@ -138,6 +143,7 @@
          "program_officer",
          "gateway",
          "program_officer",
+         "chw_supervisor",
          "health_worker",
          "chw"
       ],
@@ -151,6 +157,7 @@
       "can_edit_verification":[
          "national_admin",
          "program_officer",
+         "chw_supervisor",
          "health_worker",
          "chw"
       ],
@@ -206,20 +213,17 @@
       "can_update_people":[
          "national_admin",
          "program_officer",
+         "chw_supervisor",
          "health_worker",
          "chw"
       ],
       "can_update_places":[
          "national_admin",
-         "program_officer",
-         "health_worker",
-         "chw"
+         "program_officer"
       ],
       "can_update_reports":[
          "national_admin",
-         "program_officer",
-         "health_worker",
-         "chw"
+         "program_officer"
       ],
       "can_update_users":[
          "national_admin",
@@ -229,7 +233,9 @@
          "national_admin",
          "program_officer",
          "sub_county_focal_person",
-         "chw_supervisor"
+         "chw_supervisor",
+         "chw",
+         "health_worker"
       ],
       "can_view_analytics":[
          "national_admin",
@@ -251,7 +257,9 @@
          "program_officer",
          "county_focal_person",
          "sub_county_focal_person",
-         "chw_supervisor"
+         "chw_supervisor",
+         "chw",
+         "health_worker"
       ],
       "can_view_contacts":[
          "national_admin",
@@ -290,25 +298,27 @@
          "program_officer",
          "county_focal_person",
          "sub_county_focal_person",
-         "chw_supervisor"
+         "chw_supervisor",
+         "chw",
+         "health_worker"
       ],
       "can_view_reports_tab":[
          "national_admin",
          "program_officer",
          "county_focal_person",
          "sub_county_focal_person",
-         "chw_supervisor"
+         "chw_supervisor",
+         "chw",
+         "health_worker"
       ],
       "can_view_tasks":[
-         "county_focal_person",
-         "sub_county_focal_person",
+         "program_officer",
          "chw_supervisor",
          "health_worker",
          "chw"
       ],
       "can_view_tasks_tab":[
-         "county_focal_person",
-         "sub_county_focal_person",
+         "program_officer",
          "chw_supervisor",
          "health_worker",
          "chw"
@@ -319,7 +329,9 @@
          "program_officer",
          "county_focal_person",
          "sub_county_focal_person",
-         "chw_supervisor"
+         "chw_supervisor",
+         "health_worker",
+         "chw"
       ],
       "can_view_users":[
          "national_admin",
