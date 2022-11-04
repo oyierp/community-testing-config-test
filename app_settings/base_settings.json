@@ -528,7 +528,7 @@
          "edit_key":"contact.type.chw_supervisor.edit",
          "primary_contact_key":"chw_supervisor.field.contact",
          "parents":[
-            "sub_county_office"
+            "link_facility"
          ],
          "icon":"medic-health-worker",
          "create_form":"form:contact:chw_supervisor:create",
