@@ -24,10 +24,10 @@
    "place_hierarchy_types":[
       "national_office",
       "county_office",
-      "sub_county_office",
+      "subcounty_office",
       "link_facility",
       "chw_area",
-      "house_hold"
+      "household"
    ],
    "default_responses":{
       "start_date":""
@@ -67,8 +67,8 @@
       "county_focal_person":{
          "name":"usertype.county_focal_person"
       },
-      "sub_county_focal_person":{
-         "name":"usertype.sub_county_focal_person"
+      "subcounty_focal_person":{
+         "name":"usertype.subcounty_focal_person"
       },
       "chw_supervisor":{
          "name":"usertype.chw_supervisor",
@@ -150,7 +150,7 @@
       "can_edit_profile":[
          "national_admin",
          "county_focal_person",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "program_officer",
          "chw_supervisor",
          "health_worker",
@@ -159,9 +159,7 @@
       "can_edit_verification":[
          "national_admin",
          "program_officer",
-         "chw_supervisor",
-         "health_worker",
-         "chw"
+         "chw_supervisor"
       ],
       "can_export_all":[
          "national_admin",
@@ -175,20 +173,20 @@
          "national_admin",
          "program_officer",
          "county_focal_person",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor"
       ],
       "can_export_feedback":[
          "national_admin",
          "program_officer",
-         "sub_county_focal_person"
+         "subcounty_focal_person"
       ],
       "can_export_forms":[
          "national_admin",
          "analytics",
          "program_officer",
          "county_focal_person",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor"
       ],
       "can_export_messages":[
@@ -203,13 +201,13 @@
          "program_officer",
          "gateway",
          "county_focal_person",
-         "sub_county_focal_person"
+         "subcounty_focal_person"
       ],
       "can_update_messages":[
          "national_admin",
          "gateway",
          "program_officer",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor"
       ],
       "can_update_people":[
@@ -240,7 +238,7 @@
       "can_verify_reports":[
          "national_admin",
          "program_officer",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor",
          "chw",
          "health_worker"
@@ -249,14 +247,14 @@
          "national_admin",
          "analytics",
          "program_officer",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "county_focal_person",
          "chw_supervisor"
       ],
       "can_view_analytics_tab":[
          "national_admin",
          "program_officer",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "county_focal_person",
          "chw_supervisor"
       ],
@@ -264,14 +262,16 @@
          "national_admin",
          "program_officer",
          "county_focal_person",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor",
          "chw",
-         "health_worker"
+         "health_worker"m
       ],
       "can_view_contacts":[
          "national_admin",
          "program_officer",
+         "county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor",
          "chw",
          "health_worker"
@@ -279,6 +279,8 @@
       "can_view_contacts_tab":[
          "national_admin",
          "program_officer",
+         "county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor",
          "chw",
          "health_worker"
@@ -288,6 +290,8 @@
          "analytics",
          "gateway",
          "program_officer",
+         "county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor",
          "chw",
          "health_worker"
@@ -311,7 +315,7 @@
          "national_admin",
          "program_officer",
          "county_focal_person",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor",
          "chw",
          "health_worker"
@@ -320,7 +324,7 @@
          "national_admin",
          "program_officer",
          "county_focal_person",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor",
          "chw",
          "health_worker"
@@ -342,7 +346,7 @@
          "gateway",
          "program_officer",
          "county_focal_person",
-         "sub_county_focal_person",
+         "subcounty_focal_person",
          "chw_supervisor",
          "health_worker",
          "chw"
@@ -404,18 +408,18 @@
          "edit_form":"form:contact:county_office:edit"
       },
       {
-         "id":"sub_county_office",
-         "name_key":"contact.type.sub_county_office",
-         "group_key":"contact.type.sub_county_office.plural",
-         "create_key":"contact.type.sub_county_office.new",
+         "id":"subcounty_office",
+         "name_key":"contact.type.subcounty_office",
+         "group_key":"contact.type.subcounty_office.plural",
+         "create_key":"contact.type.subcounty_office.new",
          "edit_key":"contact.type.place.edit",
-         "primary_contact_key":"sub_county_office.field.contact",
+         "primary_contact_key":"subcounty_office.field.contact",
          "parents":[
             "county_office"
          ],
          "icon":"medic-county",
-         "create_form":"form:contact:sub_county_office:create",
-         "edit_form":"form:contact:sub_county_office:edit"
+         "create_form":"form:contact:subcounty_office:create",
+         "edit_form":"form:contact:subcounty_office:edit"
       },
       {
          "id":"link_facility",
@@ -425,9 +429,9 @@
          "edit_key":"contact.type.place.edit",
          "primary_contact_key":"link_facility.field.contact",
          "parents":[
-            "sub_county_office"
+            "subcounty_office"
          ],
-         "icon":"sub-county-hospital",
+         "icon":"icon-places-hospital",
          "create_form":"form:contact:link_facility:create",
          "edit_form":"form:contact:link_facility:edit"
       },
@@ -439,25 +443,25 @@
          "edit_key":"contact.type.chw_area.edit",
          "primary_contact_key":"chw_area.field.contact",
          "parents":[
-            "sub_county_office"
+            "link_facility"
          ],
-         "icon":"medic-health-worker",
+         "icon":"medic-chw-area",
          "create_form":"form:contact:chw_area:create",
          "edit_form":"form:contact:chw_area:edit"
       },
       {
-         "id":"house_hold",
-         "name_key":"contact.type.house_hold",
-         "group_key":"contact.type.house_hold.plural",
-         "create_key":"contact.type.house_hold.new",
-         "edit_key":"contact.type.house_hold.edit",
-         "primary_contact_key":"house_hold.field.contact",
+         "id":"household",
+         "name_key":"contact.type.household",
+         "group_key":"contact.type.household.plural",
+         "create_key":"contact.type.household.new",
+         "edit_key":"contact.type.household.edit",
+         "primary_contact_key":"household.field.contact",
          "parents":[
             "chw_area"
          ],
-         "icon":"house-hold",
-         "create_form":"form:contact:house_hold:create",
-         "edit_form":"form:contact:house_hold:edit"
+         "icon":"icon-places-household",
+         "create_form":"form:contact:household:create",
+         "edit_form":"form:contact:household:edit"
       },
       {
          "id":"suspected_case",
@@ -467,8 +471,10 @@
          "edit_key":"contact.type.place.edit",
          "primary_contact_key":"suspected_case.field.contact",
          "parents":[
-            "link_facility",
-            "house-hold"
+            "household",
+            "health_worker",
+            "chw_supervisor",
+            "national_office"            
          ],
          "icon":"medic-covid-suspect",
          "create_form":"form:contact:suspected_case:create",
@@ -491,12 +497,12 @@
          "person":true
       },
       {
-         "id":"county_officer",
-         "name_key":"contact.type.county_officer",
-         "group_key":"contact.type.county_officer.plural",
-         "create_key":"contact.type.county_officer.new",
-         "edit_key":"contact.type.county_officer.edit",
-         "primary_contact_key":"county_officer.field.contact",
+         "id":"county_focal_person",
+         "name_key":"contact.type.county_focal_person",
+         "group_key":"contact.type.county_focal_person.plural",
+         "create_key":"contact.type.county_focal_person.new",
+         "edit_key":"contact.type.county_focal_person.edit",
+         "primary_contact_key":"county_focal_person.field.contact",
          "parents":[
             "county_office"
          ],
@@ -506,18 +512,18 @@
          "person":true
       },
       {
-         "id":"sub_county_officer",
-         "name_key":"contact.type.sub_county_officer",
-         "group_key":"contact.type.sub_county_officer.plural",
-         "create_key":"contact.type.sub_county_officer.new",
-         "edit_key":"contact.type.sub_county_officer.edit",
-         "primary_contact_key":"sub_county_officer.field.contact",
+         "id":"subcounty_focal_person",
+         "name_key":"contact.type.subcounty_focal_person",
+         "group_key":"contact.type.subcounty_focal_person.plural",
+         "create_key":"contact.type.subcounty_focal_person.new",
+         "edit_key":"contact.type.subcounty_focal_person.edit",
+         "primary_contact_key":"subcounty_focal_person.field.contact",
          "parents":[
-            "sub_county_office"
+            "subcounty_office"
          ],
          "icon":"medic-health-worker",
-         "create_form":"form:contact:sub_county_officer:create",
-         "edit_form":"form:contact:sub_county_officer:edit",
+         "create_form":"form:contact:subcounty_focal_person:create",
+         "edit_form":"form:contact:subcounty_focal_person:edit",
          "person":true
       },
       {
