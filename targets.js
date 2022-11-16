@@ -35,7 +35,7 @@ module.exports = [
     id: 'covid-test-all-time',
     type: 'count',
     icon: 'medic-covid-case',
-    goal: 5120,
+    goal: -1,
     translation_key: 'targets.all_timeCovid.title',
     subtitle_translation_key: 'targets.all_time.subtitle',
     appliesTo: 'contacts',

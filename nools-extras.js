@@ -23,42 +23,42 @@ const emptCovidTested = (contact) => {
 
 const mksCovidTested = (contact) => {
   return contact.parent && 
-    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === 'a2df09b4-6942-48a4-bda4-e730bd3e9e6e') && report.fields.testing && report.fields.testing.cov_test);
+    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === 'a422212c-35c8-41c7-a84e-4539ddd5b722') && report.fields.testing && report.fields.testing.cov_test);
 };
 
 const kjdCovidTested = (contact) => {
   return contact.parent && 
-    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === '792ab916-1422-499c-82df-abf19afd33e5') && report.fields.testing && report.fields.testing.cov_test);
+    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === '76be1173-24ce-44f6-a9ec-8b1451b266d2') && report.fields.testing && report.fields.testing.cov_test);
 };
 
 const nrbCovidTested = (contact) => {
   return contact.parent && 
-    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === '8d4c38d1-d946-4652-ad19-c59639512958') && report.fields.testing && report.fields.testing.cov_test);
+    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === 'a7eb19a2-5d1d-4205-9e85-931ba0a32ffe') && report.fields.testing && report.fields.testing.cov_test);
 };
 
 const msaCovidTested = (contact) => {
   return contact.parent && 
-    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === 'f32fcac5-9395-4e64-8da9-2b86d4474e0f') && report.fields.testing && report.fields.testing.cov_test);
+    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === '83bd1210-1a73-47d2-9f91-7c4f47bc9061') && report.fields.testing && report.fields.testing.cov_test);
 };
 
 const posCovidTestedMks = (contact) => {
   return contact.parent && 
-    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === 'a2df09b4-6942-48a4-bda4-e730bd3e9e6e') && report.fields.testing && report.fields.testing.cov_test ==='Positive');
+    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === 'a422212c-35c8-41c7-a84e-4539ddd5b722') && report.fields.testing && report.fields.testing.cov_test ==='Positive');
 };
 
 const posCovidTestedKjd = (contact) => {
   return contact.parent && 
-    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === '792ab916-1422-499c-82df-abf19afd33e5') && report.fields.testing && report.fields.testing.cov_test ==='Positive');
+    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === '76be1173-24ce-44f6-a9ec-8b1451b266d2') && report.fields.testing && report.fields.testing.cov_test ==='Positive');
 };
 
 const posCovidTestedNrb = (contact) => {
   return contact.parent && 
-    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === '8d4c38d1-d946-4652-ad19-c59639512958') && report.fields.testing && report.fields.testing.cov_test ==='Positive');
+    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === 'a7eb19a2-5d1d-4205-9e85-931ba0a32ffe') && report.fields.testing && report.fields.testing.cov_test ==='Positive');
 };
 
 const posCovidTestedMsa = (contact) => {
   return contact.parent && 
-    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === 'f32fcac5-9395-4e64-8da9-2b86d4474e0f') && report.fields.testing && report.fields.testing.cov_test ==='Positive');
+    contact.reports.some(report => (report.form === 'case_investigation' && report.contact.parent && report.contact.parent._id === '83bd1210-1a73-47d2-9f91-7c4f47bc9061') && report.fields.testing && report.fields.testing.cov_test ==='Positive');
 };
 
 module.exports = {
@@ -76,6 +76,5 @@ module.exports = {
   posCovidTestedKjd,
   posCovidTestedNrb,
   posCovidTestedMsa
-
 }; 
 
