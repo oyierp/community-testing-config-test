@@ -265,7 +265,7 @@
          "subcounty_focal_person",
          "chw_supervisor",
          "chw",
-         "health_worker"m
+         "health_worker"
       ],
       "can_view_contacts":[
          "national_admin",
