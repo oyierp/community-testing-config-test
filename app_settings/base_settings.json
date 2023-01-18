@@ -327,10 +327,11 @@
       "changes_limit":100,
       "debounce_interval":200
    },
-   "replication_depth":[
+    "replication_depth":[
       {
          "role":"chw_supervisor",
-         "depth":3
+         "depth":2,
+         "report_depth":1
       },
       {
          "role":"chw",
@@ -338,8 +339,9 @@
       },
       {
          "role":"health_worker",
-         "depth":3
-      }
+         "depth":2,
+         "report_depth":1
+     }
    ],
    "contact_types":[
       {
