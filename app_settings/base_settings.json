@@ -330,7 +330,7 @@
     "replication_depth":[
       {
          "role":"chw_supervisor",
-         "depth":2,
+         "depth":1,
          "report_depth":1
       },
       {
@@ -339,7 +339,7 @@
       },
       {
          "role":"health_worker",
-         "depth":2,
+         "depth":1,
          "report_depth":1
      }
    ],
